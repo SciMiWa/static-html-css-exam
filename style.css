@@ -47,14 +47,18 @@
 
 /*hides or shows images based on screen size*/
 
-@media (max-width: var(--tablet-size)){
+.tablet-pic, .desktop-pic{
+    display: none;
+}
+
+@media (min-width: 600px){
     .tablet-pic{
-        display: none;
+        display: block;
     }
 }
 
-@media (max-width: var(--desktop-size)){
+@media (min-width: 1024px){
     .desktop-pic{
-        display: none;
+        display: block;
     }
 }
