@@ -41,4 +41,20 @@
     --primary-accent: #8A2E3B;
     --secondary-accent: #C27A45;
     --background-color: #F8F3EC;
+    --tablet-size: 600px;
+    --desktop-size: 1024px;
+}
+
+/*hides or shows images based on screen size*/
+
+@media (max-width: var(--tablet-size)){
+    .tablet-pic{
+        display: none;
+    }
+}
+
+@media (max-width: var(--desktop-size)){
+    .desktop-pic{
+        display: none;
+    }
 }
