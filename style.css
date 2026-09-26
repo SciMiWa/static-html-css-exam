@@ -45,6 +45,25 @@
     --desktop-size: 1024px;
 }
 
+figure{
+    max-width: 100%;
+}
+
+ul{
+    list-style: none;
+}
+
+body, header, div.homepage-top-pics, div.quote, section.news, section.new-recipes, footer, nav>ul{
+    display: flex;
+}
+
+body{
+    flex-direction: column;
+    column-gap: 0.5rem;
+}
+
+
+
 /*hides or shows images based on screen size*/
 
 .tablet-pic, .desktop-pic{
@@ -63,6 +82,3 @@
     }
 }
 
-figure{
-    max-width: 100%;
-}
