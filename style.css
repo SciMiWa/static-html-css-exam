@@ -33,5 +33,12 @@
 }
 
 :root{
-    --main-font: f
+    --mf-regular: "merriweather-regular", serif;
+    --mf-bold-italic: "merriweather-bold-italic", serif;
+    --mf-italic: "merriweather-italic", serif;
+    --mf-bold: "merriweather-bold", serif;
+    --text-color:#33262A;
+    --primary-accent: #8A2E3B;
+    --secondary-accent: #C27A45;
+    --background-color: #F8F3EC;
 }
