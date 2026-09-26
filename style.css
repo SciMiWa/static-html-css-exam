@@ -72,11 +72,12 @@ ul{
     list-style: none;
 }
 
-body, header, div.homepage-top-pics, div.quote, section.news, section.new-recipes, footer, nav>ul{
+header, div.homepage-top-pics, div.quote, section.news, section.new-recipes, footer, nav>ul{
     display: flex;
 }
 
 body{
+    display: grid;
     flex-direction: column;
 }
 
