@@ -111,12 +111,23 @@ body{
 /*header*/
 
 header{
-    border-bottom: 0.1rem solid var(--secondary-accent);
+    border-bottom: 0.1rem solid var(--primary-accent);
+}
+
+header > nav{
+    margin-top: 0.25rem;
+    border-top: 0.1rem solid var(--primary-accent);
+    width: 100%;
+
 }
 
 li{
     font-family: var(--mf-regular);
     color: var(--primary-accent);
+}
+
+.active-page{
+    border-bottom: 0.2rem solid var(--primary-accent);;
 }
 
 /*quote article*/
