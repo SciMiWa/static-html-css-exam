@@ -47,7 +47,6 @@
     --tablet-size: 600px;
     --desktop-size: 1024px;
     --section-row-gap: 1rem;
-    --section-h2-border-bottom: 0.25rem;
 }
 
 /*Text related styling*/
@@ -70,10 +69,14 @@ h1, h2{
 
 h1{
     font-size: 2rem;
+    margin-bottom: 0.2rem;
 }
 
 h2{
     font-size: 1.5rem;
+    border-bottom: 0.25rem solid var(--primary-accent);
+    width: 100%;
+    margin-top: 2rem;
 }
 
 h3{
@@ -87,6 +90,7 @@ figure, img{
 
 a:link, a:visited{
     color: var(--text-color);
+    font-size: 1.2rem;
 }
 
 a:hover{
@@ -98,9 +102,9 @@ ul{
     list-style: none;
 }
 
-/*Cross element styling and structuring*/
+/*Cross element/section styling and structuring*/
 
-body, header, div.homepage-top-pics, div.quote, .news, section.new-recipes, footer, nav>ul{
+body, header, .homepage-top-pics, div.quote, .news, section.new-recipes, footer, nav>ul{
     display: flex;
     flex-wrap: wrap;
     line-height: 1.4;
@@ -110,6 +114,10 @@ body{
     flex-direction: column;
     width: 100%;
     row-gap: 1rem;
+}
+
+.quote, .news, .new-recipes{
+    margin-bottom: 1.5rem;
 }
 
 /*Styling per section/article/...*/
@@ -131,6 +139,12 @@ li{
     border-bottom: 0.2rem solid var(--primary-accent);;
 }
 
+/*homepage-top-pics section*/
+
+.homepage-top-pics > h2{
+    margin-top: 0rem;
+}
+
 /*quote article*/
 
 .quote{
@@ -138,7 +152,6 @@ li{
     border-bottom: 0.4rem double var(--primary-accent);
     background-color: var(--background-color);
     margin-top: 0.7rem;
-    margin-bottom: 2.5rem;
     text-align: center;
 }
 
@@ -161,11 +174,6 @@ q + p{
     row-gap: var(--section-row-gap);
 }
 
-.news > h2{
-    border-bottom: var(--section-h2-border-bottom) solid var(--primary-accent);
-    width: 100%;
-}
-
 .news > figure{
     border-bottom: 0.2rem solid var(--primary-accent);
 }
@@ -174,15 +182,9 @@ q + p{
 /*new-recipes section*/
 
 .new-recipes{
-    border-bottom: 0.5rem double var(--primary-accent);
     row-gap: var(--section-row-gap);
 }
 
-.new-recipes > h2{
-    border-bottom: var(--section-h2-border-bottom) solid var(--primary-accent);
-    width: 100%;
-    margin-top: 2rem;
-}
 
 /*hides or shows images based on screen size*/
 
