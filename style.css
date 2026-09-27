@@ -108,7 +108,7 @@ ul{
 
 
 
-body, header, .homepage-top-pics, div.quote, .news, section.new-recipes, footer, nav>ul, .mission-and-pics, .mission{
+body, header, .homepage-top-pics, div.quote, .news, section.new-recipes, footer, nav>ul, .mission-and-pics, .mission, .mission-pics{
     display: flex;
     flex-wrap: wrap;
     line-height: 1.4;
@@ -221,6 +221,11 @@ footer{
 
 .mission{
     row-gap: 1rem;
+}
+
+.mission-pics{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 /*hides or shows images based on screen size*/
