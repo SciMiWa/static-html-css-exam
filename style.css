@@ -50,9 +50,14 @@
 
 body{
     flex-direction: column;
+    column-gap: 2rem;
     width: 100%;
     font-size: 1rem;
     line-height: 1.5;
+}
+
+body > *{
+    border-bottom: var(--primary-accent);
 }
 
 li{
