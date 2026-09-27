@@ -118,8 +118,7 @@ body{
     row-gap: 1rem;
     padding-left: 0.2rem;
     padding-right: 0.2rem;
-    justify-content: space-between;
-    min-height: 100vh;
+    min-height: 100dvh;
 }
 
 .quote, .news, .new-recipes{
@@ -204,7 +203,12 @@ footer{
     width: 100%;
 }
 
+/*"ONZE-MISSIE" PAGE*/
 
+.mission{
+    margin-left: 1dvh;
+    margin-right: 1dvh;
+}
 
 /*hides or shows images based on screen size*/
 
