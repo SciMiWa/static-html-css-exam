@@ -49,7 +49,6 @@
 }
 
 body{
-    display: flex;
     flex-direction: column;
     width: 100%;
     font-size: 1rem;
@@ -93,7 +92,7 @@ ul{
     list-style: none;
 }
 
-header, div.homepage-top-pics, div.quote, section.news, section.new-recipes, footer, nav>ul{
+body, header, div.homepage-top-pics, div.quote, section.news, section.new-recipes, footer, nav>ul{
     display: flex;
     flex-wrap: wrap;
 }
