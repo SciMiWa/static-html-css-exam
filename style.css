@@ -205,9 +205,9 @@ footer{
 
 /*"ONZE-MISSIE" PAGE*/
 
-.mission{
-    margin-left: 1dvh;
-    margin-right: 1dvh;
+.mission-and-pics{
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
 }
 
 /*hides or shows images based on screen size*/
