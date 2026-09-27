@@ -48,11 +48,15 @@
     --desktop-size: 1024px;
 }
 
+/*Text related styling*/
+
 p{
     font-family: var(--mf-regular);
     color: var(--text-color);
     font-size: 0.8rem;
 }
+
+/*h1-3 styling*/
 
 h1, h2, h3{
     font-family: var(--mf-bold);
@@ -87,6 +91,8 @@ ul{
     list-style: none;
 }
 
+/*Cross element styling and structuring*/
+
 body, header, div.homepage-top-pics, div.quote, section.news, section.new-recipes, footer, nav>ul{
     display: flex;
     flex-wrap: wrap;
@@ -99,6 +105,8 @@ body{
     font-size: 1rem;
     line-height: 1.5;
 }
+
+/*Styling per section/article/...*/
 
 /*header*/
 
@@ -117,6 +125,8 @@ li{
     border-top: 0.3rem double var(--primary-accent);
     border-bottom: 0.2rem double var(--primary-accent);
     background-color: var(--background-color);
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
 }
 
 q{
@@ -125,7 +135,6 @@ q{
     font-family: var(--mf-bold-italic);
     color: var(--secondary-accent);
     background-color: var(--background-color);
-    margin: auto;
 }
 
 q + p{
@@ -135,7 +144,20 @@ q + p{
 
 /*news section*/
 
+.news{
+    border-bottom: 0.5rem double var(--primary-accent);
+}
 
+.news > h2{
+    border-bottom: 0.5rem solid var(--primary-accent);
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.news > figure{
+    margin-bottom: 2rem;
+    border-bottom: 0.05rem solid var(--primary-accent);
+}
 
 
 /*hides or shows images based on screen size*/
