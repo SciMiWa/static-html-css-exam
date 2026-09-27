@@ -156,7 +156,7 @@ q + p{
 
 .news > figure{
     margin-bottom: 2rem;
-    border-bottom: 0.2rem solid var(--primary-accent);
+    border-bottom: 0.5rem solid var(--primary-accent);
 }
 
 
