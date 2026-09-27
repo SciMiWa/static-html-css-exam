@@ -70,6 +70,7 @@ h1, h2{
 h1{
     font-size: 2rem;
     margin-bottom: 0.2rem;
+    padding-left: 0.1em;
 }
 
 h2{
@@ -190,7 +191,7 @@ q + p{
 
 /*footer section*/
 
-footer > *{
+footer > *, footer a:link{
     font-size: 0.8rem;
 }
 
@@ -200,6 +201,7 @@ footer{
     border-bottom: 0.15rem solid var(--primary-accent);
     width: 100%;
 }
+
 
 
 /*hides or shows images based on screen size*/
