@@ -7,7 +7,7 @@
 
 @font-face{
     font-family: "merriweather-bold.woff2";
-    src: url("/fonts/merriweather-bold.woff2");
+    src: url("fonts/merriweather-bold.woff2");
     font-weight: 700;
     font-style: normal;
 }
@@ -21,7 +21,7 @@
 
 @font-face{
     font-family: "merriweather-regular.woff2";
-    src: url(/fonts/merriweather-regular.woff2);
+    src: url(fonts/merriweather-regular.woff2);
     font-weight: 400;
     font-style: normal;
 }
