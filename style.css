@@ -112,6 +112,8 @@ body{
     flex-direction: column;
     width: 100%;
     row-gap: 1rem;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
 }
 
 .quote, .news, .new-recipes{
