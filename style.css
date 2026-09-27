@@ -105,6 +105,10 @@ ul{
 }
 
 /*Cross element/section styling and structuring*/
+    p{
+        color: var(--text-color);
+    }
+
 
 body, header, .homepage-top-pics, div.quote, .news, section.new-recipes, footer, nav>ul{
     display: flex;
