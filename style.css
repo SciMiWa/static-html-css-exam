@@ -48,23 +48,6 @@
     --desktop-size: 1024px;
 }
 
-body{
-    flex-direction: column;
-    column-gap: 2rem;
-    width: 100%;
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-body > *{
-    border-bottom: var(--primary-accent);
-}
-
-li{
-    font-family: var(--mf-regular);
-    color: var(--primary-accent);
-}
-
 p{
     font-family: var(--mf-regular);
     color: var(--text-color);
@@ -73,7 +56,7 @@ p{
 
 h1, h2, h3{
     font-family: var(--mf-bold);
-    color: var(--secondary-accent);
+    color: var(--primary-accent);
 }
 
 h1{
@@ -88,9 +71,16 @@ h3{
     font-size: 1rem;
 }
 
-
 figure, img{
     max-width: 100%;
+}
+
+a:link, a:visited{
+    color: var(--secondary-accent);
+}
+
+a:hover{
+    color: var(--primary-accent);
 }
 
 ul{
@@ -102,21 +92,51 @@ body, header, div.homepage-top-pics, div.quote, section.news, section.new-recipe
     flex-wrap: wrap;
 }
 
-a:link, a:visited{
-    color: var(--secondary-accent);
+body{
+    flex-direction: column;
+    row-gap: 1.2rem;
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
-a:hover{
+/*header*/
+
+header{
+    border-bottom: 0.1rem solid var(--secondary-accent);
+}
+
+li{
+    font-family: var(--mf-regular);
     color: var(--primary-accent);
+}
+
+/*quote article*/
+
+.quote{
+    border-top: 0.3rem double var(--primary-accent);
+    border-bottom: 0.2rem double var(--primary-accent);
+    background-color: var(--background-color);
 }
 
 q{
     color: var(--primary-accent);
+    font-size: 1.4rem;
+    font-family: var(--mf-bold-italic);
+    color: var(--secondary-accent);
+    background-color: var(--background-color);
+    margin: auto;
 }
 
-div.quote{
-    background-color: var(--secondary-accent);
+q + p{
+    background-color: var(--background-color);
+    font-size: 0.8rem;
 }
+
+/*news section*/
+
+
+
 
 /*hides or shows images based on screen size*/
 
