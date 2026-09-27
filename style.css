@@ -47,6 +47,7 @@
     --tablet-size: 600px;
     --desktop-size: 1024px;
     --section-row-gap: 1rem;
+    --par-line-height: 1.5;
 }
 
 /*Text related styling*/
@@ -92,7 +93,9 @@ a:link, a:visited{
     text-decoration: none;
     font-family: var(--mf-italic);
     font-style: italic;
-
+    line-height: var(--par-line-height);
+    margin-left: 0.1rem;
+    margin-right: 0.1rem;
 }
 
 a:hover{
@@ -216,7 +219,7 @@ footer{
 
 .mission-and-pics p{
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: var(--par-line-height);
 }
 
 .mission{
@@ -227,6 +230,8 @@ footer{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
+
+
 
 /*hides or shows images based on screen size*/
 
