@@ -78,7 +78,7 @@ h2{
     width: 100%;
 }
 
-h3{
+h3, a:link, a:visited{
     font-size: 1rem;
     color: var(--text-color);
 }
@@ -88,7 +88,10 @@ figure, img{
 }
 
 a:link, a:visited{
-    color: var(--text-color);
+    text-decoration: none;
+    font-family: var(--mf-italic);
+    font-style: italic;
+
 }
 
 a:hover{
