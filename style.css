@@ -76,7 +76,6 @@ h2{
     font-size: 1.5rem;
     border-bottom: 0.25rem solid var(--primary-accent);
     width: 100%;
-    margin-top: 2rem;
 }
 
 h3{
@@ -90,7 +89,6 @@ figure, img{
 
 a:link, a:visited{
     color: var(--text-color);
-    font-size: 1.2rem;
 }
 
 a:hover{
@@ -183,6 +181,19 @@ q + p{
 
 .new-recipes{
     row-gap: var(--section-row-gap);
+}
+
+/*footer section*/
+
+footer > *{
+    font-size: 0.8rem;
+}
+
+footer{
+    justify-content: space-between;
+    border-top: 0.15rem solid var(--primary-accent);
+    border-bottom: 0.15rem solid var(--primary-accent);
+    width: 100%;
 }
 
 
