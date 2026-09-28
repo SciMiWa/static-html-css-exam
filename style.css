@@ -26,15 +26,6 @@
     font-style: normal;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    column-gap: 1rem;
-    background-color: var(--background-color);
-    max-width: 100%;
-}
-
 :root{
     --mf-regular: "merriweather-regular", serif;
     --mf-bold-italic: "merriweather-bold-italic", serif;
@@ -46,8 +37,16 @@
     --background-color: #f7eee1;
     --tablet-size: 600px;
     --desktop-size: 1024px;
-    --section-row-gap: 1rem;
+    --section-gap: 1.5rem;
+    --secondary-section-gap: 0.5rem;
     --par-line-height: 1.5;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--background-color);
 }
 
 /*Text related styling*/
@@ -55,10 +54,8 @@
 p{
     font-family: var(--mf-regular);
     color: var(--text-color);
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
-
-/*h1-3 styling*/
 
 h1, h2, h3{
     font-family: var(--mf-bold);
@@ -70,32 +67,34 @@ h1, h2{
 
 h1{
     font-size: 2rem;
-    margin-bottom: 0.2rem;
-    padding-left: 0.1em;
+    margin-top: 0.5rem;
+    margin-bottom: 0.3rem;
 }
 
 h2{
     font-size: 1.5rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.2rem;
     border-bottom: 0.25rem solid var(--primary-accent);
     width: 100%;
 }
 
-h3, a:link, a:visited{
-    font-size: 1rem;
+h3{
+    font-size: 1.2rem;
     color: var(--text-color);
 }
 
-figure, img{
-    max-width: 100%;
+h3{
+    margin-top: 0.2rem;
+    margin-bottom: 0.1rem;
 }
 
 a:link, a:visited{
+    color: var(--text-color);
+    font-size: 1rem;
     text-decoration: none;
     font-family: var(--mf-italic);
     font-style: italic;
-    line-height: var(--par-line-height);
-    margin-left: 0.1rem;
-    margin-right: 0.1rem;
 }
 
 a:hover{
@@ -107,41 +106,56 @@ ul{
     list-style: none;
 }
 
+figure img{
+    width: 100%;
+    height: 100%;
+}
+
 /*Cross element/section styling and structuring*/
 
+.index-body{
+    display: grid;
+}
 
-
-body, header, .homepage-top-pics, div.quote, .news, section.new-recipes, footer, nav>ul, .mission-and-pics, .mission, .mission-pics{
+header, .homepage-top-pics, div.quote, .news, section.new-recipes, footer, nav>ul, .mission-and-pics, .mission, .mission-pics, .recipe-page-section, .recipe-figure-section, .cuisine{
     display: flex;
     flex-wrap: wrap;
-    line-height: 1.4;
 }
 
 body{
     flex-direction: column;
     width: 100%;
-    row-gap: 1rem;
-    padding-left: 0.2rem;
-    padding-right: 0.2rem;
+    gap: var(--section-gap);
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    line-height: 1.4;
 }
 
-.quote, .news, .new-recipes{
-    margin-bottom: 1.5rem;
+li{
+    font-size: 0.8rem;
+    font-family: var(--mf-regular);
+    color: var(--text-color);
 }
+
+.news h2, .new-recipes h2, .news a, .new-recipes a{
+    margin-bottom: 1rem;
+}
+
 
 /*Styling per section/article/...*/
 
 /*header*/
 
+
 header > nav{
-    border-top: 0.1rem solid var(--primary-accent);
-    border-bottom: 0.1rem solid var(--primary-accent);
+    border-top: 0.15rem solid var(--primary-accent);
+    border-bottom: 0.15rem solid var(--primary-accent);
     width: 100%;
 }
 
-li{
-    font-family: var(--mf-regular);
-    color: var(--text-color);
+header ul{
+    display: flex;
+    justify-content: space-between;
 }
 
 .active-page{
@@ -150,18 +164,15 @@ li{
 
 /*homepage-top-pics section*/
 
-.homepage-top-pics > h2{
-    margin-top: 0rem;
-}
 
 /*quote article*/
 
 .quote{
+    text-align: center;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
     border-top: 0.4rem double var(--primary-accent);
     border-bottom: 0.4rem double var(--primary-accent);
-    background-color: var(--background-color);
-    margin-top: 0.7rem;
-    text-align: center;
 }
 
 q{
@@ -172,27 +183,17 @@ q{
 }
 
 q + p{
-    color: var(--text-color);
-    font-size: 0.8rem;
     text-align: center;
 }
 
-/*news section*/
+/*news & new-recipes section*/
 
-.news{
-    row-gap: var(--section-row-gap);
-}
-
-.news > figure{
-    border-bottom: 0.2rem solid var(--primary-accent);
+.news, .new-recipes{
+    gap: var(--secondary-section-gap);
 }
 
 
-/*new-recipes section*/
 
-.new-recipes{
-    row-gap: var(--section-row-gap);
-}
 
 /*footer section*/
 
@@ -204,42 +205,70 @@ footer{
     justify-content: space-between;
     border-top: 0.15rem solid var(--primary-accent);
     border-bottom: 0.15rem solid var(--primary-accent);
-    width: 100%;
+}
+
+footer nav{
+    align-self: center;
 }
 
 /*"ONZE-MISSIE" PAGE*/
 
 .mission-and-pics{
-    margin-top: 0.4rem;
+    margin-top: 0.5rem;
     margin-left: 1.2rem;
     margin-right: 1.2rem;
-    row-gap: 1rem;
+    gap: var(--section-gap);
 }
 
 .mission-and-pics p{
-    font-size: 1rem;
     line-height: var(--par-line-height);
 }
 
 .mission{
-    row-gap: 1rem;
+    gap: var(--section-gap);
 }
 
 .mission-pics-bottom, .mission-pics-top{
     display: grid;
     grid-template-columns: 1fr;
+    gap: var(--section-gap);
+}
+
+/*"RECEPTEN" PAGE*/
+
+.cuisine{
+    gap: var(--secondary-section-gap);
+}
+
+.cuisine h2{
+    margin-top: 2rem;
+}
+
+.figure-section{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: var(--section-gap);
+    column-gap: var(--secondary-section-gap);
+}
+
+.spanned-figure{
+    grid-column: 1 / 3;
 }
 
 
+.recipe-page-section{
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+}
 
 /*hides or shows images based on screen size*/
 
-.tablet-pic, .desktop-pic{
+.tablet-pic, .tablet-anchor, .desktop-pic{
     display: none;
 }
 
 @media (min-width: 600px){
-    .tablet-pic{
+    .tablet-pic, .tablet-anchor{
         display: block;
     }
 }
