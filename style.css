@@ -104,169 +104,17 @@ ul{
     list-style: none;
 }
 
-figure img{
-    width: 100%;
-    height: 100%;
+img{
+    max-width: 100%;
 }
 
 /*Cross element/section styling and structuring*/
 
 
-body, header, .homepage-top-pics, div.quote, .news, section.new-recipes, footer, nav>ul, .mission-and-pics, .mission, .mission-pics, .recipe-page-section, .recipe-figure-section, .cuisine{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-body{
-    flex-direction: column;
-    width: 100%;
-    gap: var(--section-gap);
-    padding-left: 0.4rem;
-    padding-right: 0.4rem;
-    line-height: 1.4;
-}
-
-li{
-    font-size: 1rem;
-    font-family: var(--mf-regular);
-    color: var(--text-color);
-}
-
-.news h2, .new-recipes h2, .news a, .new-recipes a{
-    margin-bottom: 1rem;
-}
-
-
-/*Styling per section/article/...*/
-
-/*header*/
-
-
-header > nav{
-    border-top: 0.15rem solid var(--primary-accent);
-    border-bottom: 0.15rem solid var(--primary-accent);
-    width: 100%;
-}
-
-header ul{
-    display: flex;
-    justify-content: space-between;
-}
-
-.active-page{
-    border-bottom: 0.2rem solid var(--primary-accent);;
-}
-
-/*homepage-top-pics section*/
-
-
-/*quote article*/
-
-.quote{
-    text-align: center;
-    padding-top: 0.7rem;
-    padding-bottom: 0.7rem;
-    border-top: 0.4rem double var(--primary-accent);
-    border-bottom: 0.4rem double var(--primary-accent);
-}
-
-q{
-    font-size: 1.4rem;
-    font-family: var(--mf-bold-italic);
-    color: var(--secondary-accent);
-    text-align: center;
-}
-
-q + p{
-    text-align: center;
-}
-
-/*news & new-recipes section*/
-
-.news, .new-recipes{
-    gap: var(--secondary-section-gap);
-}
+/*sections*/
 
 
 
-
-/*footer section*/
-
-footer > *, footer a:link{
-    font-size: 0.8rem;
-}
-
-footer{
-    justify-content: space-between;
-    border-top: 0.15rem solid var(--primary-accent);
-    border-bottom: 0.15rem solid var(--primary-accent);
-}
-
-footer nav{
-    align-self: center;
-}
-
-/*"ONZE-MISSIE" PAGE*/
-
-.mission-and-pics{
-    margin-top: 0.5rem;
-    margin-left: 1.2rem;
-    margin-right: 1.2rem;
-    gap: var(--section-gap);
-}
-
-.mission-and-pics p{
-    line-height: var(--par-line-height);
-}
-
-.mission{
-    gap: var(--section-gap);
-}
-
-.mission-pics-bottom, .mission-pics-top{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--section-gap);
-}
-
-/*"RECEPTEN" PAGE*/
-
-.cuisine, .recipe-figure-section, .prep-ingredients-section{
-    gap: var(--secondary-section-gap);
-}
-
-.figure-section{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: var(--section-gap);
-    column-gap: var(--secondary-section-gap);
-}
-
-.prep-ingredients-section{
-    margin-top: 1rem;
-    display: grid;
-    gap: var(--section-gap);
-}
-
-.prep-section li{
-    margin-left: 1rem;
-}
-
-.cuisine h2{
-    margin-top: 2rem;
-}
-
-
-
-.spanned-figure{
-    grid-column: 1 / 3;
-}
-
-
-.recipe-page-section{
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
-}
 
 /*hides or shows images based on screen size*/
 
