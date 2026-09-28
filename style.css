@@ -113,11 +113,8 @@ figure img{
 
 /*Cross element/section styling and structuring*/
 
-.index-body{
-    display: grid;
-}
 
-header, .homepage-top-pics, div.quote, .news, section.new-recipes, footer, nav>ul, .mission-and-pics, .mission, .mission-pics, .recipe-page-section, .recipe-figure-section, .cuisine{
+body, header, .homepage-top-pics, div.quote, .news, section.new-recipes, footer, nav>ul, .mission-and-pics, .mission, .mission-pics, .recipe-page-section, .recipe-figure-section, .cuisine{
     display: flex;
     flex-wrap: wrap;
 }
@@ -132,7 +129,7 @@ body{
 }
 
 li{
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-family: var(--mf-regular);
     color: var(--text-color);
 }
@@ -236,12 +233,8 @@ footer nav{
 
 /*"RECEPTEN" PAGE*/
 
-.cuisine{
+.cuisine, .recipe-figure-section, .prep-ingredients-section{
     gap: var(--secondary-section-gap);
-}
-
-.cuisine h2{
-    margin-top: 2rem;
 }
 
 .figure-section{
@@ -250,6 +243,22 @@ footer nav{
     row-gap: var(--section-gap);
     column-gap: var(--secondary-section-gap);
 }
+
+.prep-ingredients-section{
+    margin-top: 1rem;
+    display: grid;
+    gap: var(--section-gap);
+}
+
+.prep-section li{
+    margin-left: 1rem;
+}
+
+.cuisine h2{
+    margin-top: 2rem;
+}
+
+
 
 .spanned-figure{
     grid-column: 1 / 3;
