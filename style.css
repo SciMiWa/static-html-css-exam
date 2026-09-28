@@ -94,6 +94,7 @@ section, article, aside, figure, main{
 
 main{
     grid-gap: var(--secondary-gap);
+    line-height: var(--par-line-height);
 }
 
 section, article, aside{
