@@ -171,6 +171,8 @@ a:link, a:visited{
     text-decoration: none;
     font-family: var(--mf-italic);
     font-style: italic;
+    margin-left: var(--fourth-gap);
+    margin-right: var(--fourth-gap);
 }
 
 a:hover{
