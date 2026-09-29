@@ -280,18 +280,6 @@ q, .quote p{
 
 /*SMALL PHONE SIZE*/
 
-@media (max-width: 420px){
-
-    footer{
-    display: grid;
-    }
-
-    #test{
-        display: flex;
-        justify-content: space-between;
-    }
-
-}
 
 @media (max-width: 450px){
     header nav ul{
