@@ -180,6 +180,10 @@ button{
     background-color: var(--background-color);
 }
 
+button:hover{
+    background-color: var(--secondary-accent);
+}
+
 a:link, a:visited{
     color: var(--text-color);
     font-size: clamp(var(--font-size-a), var(--font-scaling-value) + var(--font-size-a), var(--font-max-a));
@@ -253,18 +257,7 @@ q, .quote p{
     font-size: clamp(var(--font-size-small), var(--font-scaling-value) + var(--font-size-small), var(--font-max-small));
 }
 
-    /*SUBSCRIPTION PAGE*/
-
-    .subscription-body{
-        min-height: 100dvh;
-        justify-content: space-between;
-    }
-
-
-    #test{
-        margin-top: clamp(1rem, var(--font-scaling-value) + 1rem, 4rem);
-        margin-bottom: clamp(1rem, var(--font-scaling-value) + 1rem, 4rem);
-    }
+/*SUBSCRIPTION PAGE*/
 
 
 
@@ -278,9 +271,10 @@ q, .quote p{
     margin: auto;
 }
 
+
 /*SMALL PHONE SIZE*/
 
-@media (max-width: 400px){
+@media (max-width: 450px){
     header nav ul{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -347,7 +341,25 @@ q, .quote p{
     }
 
     /*end of recipes page*/
-}
+
+    /*start of subscription page*/
+
+
+    .subscription-body{
+        justify-content: space-between;
+    }
+
+    .subscription-top-pics, .subscription-bottom-pics{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .subscription-body main{
+        gap: clamp(4rem, 4rem + var(--font-scaling-value), 10rem)
+    }
+
+    }
+
+    /*end of subscription page*/
 
 
 
@@ -386,5 +398,20 @@ q, .quote p{
         display: flex;
         flex-direction: column;
     }
+
+    form{
+        width: 60%;
+        margin: auto;
+        scale: 1.1;
+    }
+
+    .subscription-top-pics, .subscription-bottom-pics{
+        margin: auto;
+        width: 90%;
+        scale: 0.9;
+    }
+
+
+
 
 }
