@@ -57,13 +57,26 @@
         <section>
 
 
-        <form action="" method="post">
+        <form action="#" method="post">
+            /*max-lengths based on google search (commonly used as such or standards)*/
             <fieldset>
-                <legend></legend>
-                <div><label for=""></label><input type="text"></div>
-                <div><label for=""></label><input type="text"></div>
-                <div><label for=""></label><input type="text"></div>
-                <button type="submit"></button>
+                <legend>Inschrijfformulier voor nieuwsbrief</legend>
+                <div>
+                    <label for="voornaam">Voornaam</label>
+                    <input type="text" id="voornaam" required maxlength="100">
+                </div>
+
+                <div>
+                    <label for="familienaam">Familienaam</label>
+                    <input type="text" id="familienaam" required maxlength="100">
+                </div>
+
+                <div>
+                    <label for="e-mailadres">E-mailadres</label>
+                    <input type="text" id="e-mailadres" required maxlength="254">
+                </div>
+                /*Apparently the value attribute makes for the visible button text*/
+                <button type="submit">Inschrijven voor nieuwsbrief</button>
             </fieldset>
         </form>
 
