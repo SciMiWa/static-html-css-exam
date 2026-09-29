@@ -253,7 +253,7 @@ q{
     font-style: italic;
     font-weight: bold;
     font-size: clamp(var(--font-size-medium), var(--font-scaling-value) + var(--font-size-medium), var(--font-max-h3));
-    color: var(--secondary-accent);
+    color: var(--primary-accent);
 }
 q, .quote p{
     margin: auto;
