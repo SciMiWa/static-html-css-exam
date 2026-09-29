@@ -172,13 +172,9 @@ h5{
     font-size: clamp(var(--font-size-regular), var(--font-scaling-value) + var(--font-size-regular), var(--font-max-h4));
 }
 
-legend, button, label{
+button, label{
     font-family: var(--mf-regular);
 
-}
-
-legend{
-    font-size: clamp(var(--font-size-large), var(--font-scaling-value) + var(--font-size-large), var(--font-size-extra-large));
 }
 
 label, button{
@@ -280,7 +276,7 @@ q, .quote p{
 form{
     display: grid;
     margin: auto;
-    width: clamp(70ch, var(--font-scaling-value) + 70ch, 140ch);
+    width: clamp(50%, var(--font-scaling-value) + 70ch, 100dvh);
     gap: var(--primary-gap);
     background-color: var(--background-color);
     text-shadow: var(--text-shadow);
