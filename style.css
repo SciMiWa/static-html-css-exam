@@ -54,6 +54,7 @@
     --font-max-p: 2rem;
     --font-max-a: 2rem;
     --font-scaling-value: 0.2vw;
+    --text-shadow: 1.2px 1px 2px var(--text-color);
 
 }
 
@@ -85,6 +86,7 @@ body{
     gap: var(--primary-gap);
     background-color: var(--background-color);
     line-height: var(--par-line-height);
+    font-family: var(--mf-regular);
 }
 
 section, article, aside, figure, main, fieldset, fieldset div{
@@ -167,20 +169,26 @@ h4{
 }
 
 h5{
-    font-size: clamp(var(--font-size-regular), var(--font-scaling-regular) + var(--font-size-regular), var(--font-max-h4));
+    font-size: clamp(var(--font-size-regular), var(--font-scaling-value) + var(--font-size-regular), var(--font-max-h4));
+}
+
+legend, button, label{
+    font-family: var(--mf-regular);
+
 }
 
 legend{
-    font-size: var(--font-size-large);
+    font-size: clamp(var(--font-size-large), var(--font-scaling-value) + var(--font-size-large), var(--font-size-extra-large));
 }
 
-label{
-    font-size: var(--font-size-regular);
+label, button{
+    font-size: clamp(var(--font-size-regular), var(--font-scaling-value) + var(--font-size-regular), var(--font-size-large));
+
 }
 
 
 button{
-    font-size: clamp(var(--font-size-small), var(--font-scaling-value) + var(--font-size-regular), var(--font-size-large));
+    font-size: clamp(var(--font-size-regular), var(--font-scaling-value) + var(--font-size-regular), var(--font-size-large));
     color: var(--text-color);
     background-color: var(--background-color);
     transition: all 1s ease-in-out;
@@ -268,6 +276,24 @@ q, .quote p{
 }
 
 /*SUBSCRIPTION PAGE*/
+
+form{
+    display: grid;
+    margin: auto;
+    width: clamp(70ch, var(--font-scaling-value) + 70ch, 140ch);
+    gap: var(--primary-gap);
+    background-color: var(--background-color);
+    text-shadow: var(--text-shadow);
+}
+
+.form-group{
+    display: grid;
+}
+
+button{
+    box-shadow: var(--text-shadow);
+}
+
 
 
 
@@ -408,12 +434,6 @@ q, .quote p{
     .prep-section, .ingredient-section{
         display: flex;
         flex-direction: column;
-    }
-
-    form{
-        width: 60%;
-        margin: auto;
-        scale: 1.1;
     }
 
     .subscription-top-pics, .subscription-bottom-pics{

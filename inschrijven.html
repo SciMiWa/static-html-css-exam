@@ -30,7 +30,7 @@
 
     <main>
 
-        <section class="subscription-top-pics" aria-label="1 tot 4 afbeeldingen over nieuwsverdeling van verschillende tijdsperiodes">
+        <section class="subscription-top-pics" aria-label="1 tot 4 afbeeldingen over informatie of nieuwsbrief verdeling van verschillende tijdsperiodes">
 
             <picture>
                 <source media="(min-width: 1024px)" srcset="img/inschrijven/desktop/i2.jpg">
@@ -60,25 +60,21 @@
 
 
         <form action="#" method="post">
-            <fieldset>
-                <legend>Inschrijfformulier voor nieuwsbrief</legend>
-                <div>
-                    <label for="voornaam">Voornaam</label>
-                    <input type="text" id="voornaam" required maxlength="100">
-                </div>
-
-                <div>
-                    <label for="familienaam">Familienaam</label>
-                    <input type="text" id="familienaam" required maxlength="100">
-                </div>
-
-                <div>
-                    <label for="e-mailadres">E-mailadres</label>
-                    <input type="text" id="e-mailadres" required maxlength="254">
-                </div>
-                <button type="submit">Inschrijven voor nieuwsbrief</button>
-            </fieldset>
+            <div class="form-group">
+                <label for="voornaam">Voornaam:</label>
+                <input type="text" id="voornaam" required maxlength="100">
+            </div>
+            <div class="form-group">
+                <label for="telnr">Familienaam:</label>
+                <input type="tel" id="telnr" required maxlength="100">
+            </div>
+            <div class="form-group">
+                <label for="e-mailadres">E-mailadres:</label>
+                <input type="email" id="e-mailadres" required maxlength="254">
+            </div>
+            <button type="submit">Inschrijven voor nieuwsbrief</button>
         </form>
+
 
 
         <section class="subscription-bottom-pics" aria-label="1 tot 4 afbeeldingen over nieuwsverdeling van verschillende tijdsperiodes">
