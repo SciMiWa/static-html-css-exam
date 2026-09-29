@@ -281,7 +281,7 @@ q, .quote p{
 
     .homepage-top-pics section{
         grid-template-columns: 2fr 1fr;
-        grid-template-rows: repeat(2, content);
+        grid-template-rows: repeat(2, 1fr);
     }
 
     /*one of the homepage-top-pics*/
