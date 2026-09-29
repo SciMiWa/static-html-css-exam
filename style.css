@@ -166,6 +166,10 @@ h4{
     margin-bottom: 0.08rem;
 }
 
+h5{
+    font-size: clamp(var(--font-size-regular), var(--font-scaling-regular) + var(--font-size-regular), var(--font-max-h4));
+}
+
 legend{
     font-size: var(--font-size-large);
 }
