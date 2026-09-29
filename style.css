@@ -39,7 +39,7 @@
     --secondary-gap: 1.5rem;
     --tertiary-gap: 1rem;
     --fourth-gap: 0.5rem;
-    --par-line-height: clamp(1.2rem, 0.2vw + 1.2rem, 1.5rem);
+    --par-line-height: clamp(1.5rem, 0.1vw + 1.5rem, 1.7rem);
     --font-size-extra-large: 2rem;
     --font-size-large: 1.5rem;
     --font-size-medium: 1.2rem;
@@ -105,7 +105,7 @@ figure, div{
     grid-gap: var(--fourth-gap);
 }
 
-.active-page{
+#active-page{
     border-bottom: 0.15rem solid var(--primary-accent);
 }
 
@@ -119,6 +119,7 @@ li{
 
 
 /*Text related styling*/
+
 
 p{
     font-family: var(--mf-regular);
@@ -212,7 +213,11 @@ footer p, footer a:link{
     grid-template-columns: 1fr;
 }
 
+/*QUOTE SECTION*/
+
 .quote{
+    display: flex;
+    flex-flow: column wrap;
     border-top: 0.4rem double var(--secondary-accent);
     border-bottom: 0.4rem double var(--secondary-accent);
     padding-top: 0.5rem;
@@ -226,17 +231,18 @@ q{
     font-weight: bold;
     font-size: clamp(var(--font-size-medium), var(--font-scaling-value) + var(--font-size-medium), var(--font-max-h3));
     color: var(--secondary-accent);
-    text-align: center;
+}
+q, .quote p{
+    margin: auto;
 }
 
 .quote p{
     font-size: clamp(var(--font-size-small), var(--font-scaling-value) + var(--font-size-small), var(--font-max-small));
-    text-align: center;
 }
 
 
 
-/*hides or shows images based on screen size*/
+/*hides or shows images based based on screen size*/
 
 .tablet-pic, .tablet-anchor, .desktop-pic{
     display: none;
@@ -246,6 +252,18 @@ q{
     margin: auto;
 }
 
+/*SMALL PHONE SIZE*/
+
+@media (max-width: 400px){
+    header nav ul{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .onze-missie-header, .startpagina-header{
+        border-bottom: 0.1rem dashed var(--secondary-accent);
+    }
+}
 
 
 /*TABLET SIZE*/
@@ -309,6 +327,7 @@ q{
 
 
 @media (min-width: 1024px){
+
     .desktop-pic{
         display: block;
     }
