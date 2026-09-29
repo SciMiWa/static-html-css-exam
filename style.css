@@ -84,11 +84,10 @@ body{
     padding-right: 0.4rem;
     gap: var(--primary-gap);
     background-color: var(--background-color);
-    justify-content: space-between;
     line-height: var(--par-line-height);
 }
 
-section, article, aside, figure, main{
+section, article, aside, figure, main, fieldset, fieldset div{
     display: grid;
 }
 
@@ -167,6 +166,20 @@ h4{
     margin-bottom: 0.08rem;
 }
 
+legend{
+    font-size: var(--font-size-large);
+}
+
+label{
+    font-size: var(--font-size-regular);
+}
+
+
+button{
+    color: var(--primary-accent);
+    background-color: var(--background-color);
+}
+
 a:link, a:visited{
     color: var(--text-color);
     font-size: clamp(var(--font-size-a), var(--font-scaling-value) + var(--font-size-a), var(--font-max-a));
@@ -239,6 +252,19 @@ q, .quote p{
 .quote p{
     font-size: clamp(var(--font-size-small), var(--font-scaling-value) + var(--font-size-small), var(--font-max-small));
 }
+
+    /*SUBSCRIPTION PAGE*/
+
+    .subscription-body{
+        min-height: 100dvh;
+        justify-content: space-between;
+    }
+
+
+    #test{
+        margin-top: clamp(1rem, var(--font-scaling-value) + 1rem, 4rem);
+        margin-bottom: clamp(1rem, var(--font-scaling-value) + 1rem, 4rem);
+    }
 
 
 
@@ -322,6 +348,8 @@ q, .quote p{
 
     /*end of recipes page*/
 }
+
+
 
 /*DESKTOP SIZE*/
 
