@@ -73,7 +73,7 @@ img{
     width: 100%;
 }
 
-body, html{
+body{
     min-height: 100dvh;
 }
 
@@ -176,11 +176,14 @@ label{
 
 
 button{
-    color: var(--primary-accent);
+    font-size: clamp(var(--font-size-small), var(--font-scaling-value) + var(--font-size-regular), var(--font-size-large));
+    color: var(--text-color);
     background-color: var(--background-color);
+    transition: all 1s ease-in-out;
 }
 
 button:hover{
+    color: var(--primary-accent);
     background-color: var(--secondary-accent);
 }
 
@@ -193,6 +196,7 @@ a:link, a:visited{
     margin-left: var(--fourth-gap);
     margin-right: var(--fourth-gap);
 }
+
 
 a:hover{
     color: var(--primary-accent);
@@ -219,6 +223,8 @@ header ul, footer{
 footer p, footer a:link{
     font-size: var(--font-size-small);
 }
+
+
 
 
 
@@ -273,6 +279,19 @@ q, .quote p{
 
 
 /*SMALL PHONE SIZE*/
+
+@media (max-width: 420px){
+
+    footer{
+    display: grid;
+    }
+
+    #test{
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
 
 @media (max-width: 450px){
     header nav ul{
