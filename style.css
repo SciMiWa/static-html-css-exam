@@ -39,7 +39,7 @@
     --secondary-gap: 1.5rem;
     --tertiary-gap: 1rem;
     --fourth-gap: 0.5rem;
-    --par-line-height: clamp(1.5rem, 1vw + 1.5rem, 2rem);
+    --par-line-height: 1.5;
     --font-size-extra-large: 2rem;
     --font-size-large: 1.5rem;
     --font-size-medium: 1.2rem;
@@ -54,6 +54,7 @@
     --font-max-p: 1.245rem;
     --font-max-a: 1.245rem;
     --font-scaling-value: 1dvw;
+    --special-small-margin: 0.1rem;
 }
 
 *{
@@ -61,11 +62,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-figcaption{
-    font-size: clamp(var(--font-size-small), var(--font-scaling-value) + var(--font-size-small), var(--font-max-p));
-}
-
 
 ul{
     list-style: none;
@@ -76,20 +72,21 @@ img, picture, blockquote{
     max-height: 100%;
     height: 100%;
     width: 100%;
+}
+
+img{
     object-fit: cover;
 }
 
-body{
-    min-height: 100dvh;
-}
 
 body{
     display: flex;
     flex-direction: column;
     gap: var(--primary-gap);
     background-color: var(--background-color);
-    line-height: var(--par-line-height);
     font-family: var(--mf-regular);
+    min-height: 100dvh;
+    line-height: var(--par-line-height);
 }
 
 section, article, aside, figure, main{
@@ -97,16 +94,15 @@ section, article, aside, figure, main{
 }
 
 main{
-    grid-gap: var(--secondary-gap);
-    line-height: var(--par-line-height);
+    gap: var(--secondary-gap);
 }
 
 section, article, aside{
-    grid-gap: var(--tertiary-gap);
+    gap: var(--tertiary-gap);
 }
 
 figure{
-    grid-gap: var(--fourth-gap);
+    gap: var(--fourth-gap);
 }
 
 .current{
@@ -124,6 +120,16 @@ li{
 
 /*Text related styling*/
 
+em{
+    font-family: var(--mf-bold-italic);
+    font-weight: bold;
+    margin-left: var(--special-small-margin);
+    margin-right: var(--special-small-margin);
+}
+
+figcaption{
+    font-size: clamp(var(--font-size-small), var(--font-scaling-value) + var(--font-size-small), var(--font-max-p));
+}
 
 p{
     font-family: var(--mf-regular);
@@ -208,9 +214,10 @@ a:link, a:visited{
     text-decoration: none;
     font-family: var(--mf-italic);
     font-style: italic;
-    margin-left: var(--fourth-gap);
-    margin-right: var(--fourth-gap);
+    margin-left: var(--special-small-margin);
+    margin-right: var(--special-small-margin);
 }
+
 
 
 a:hover{
@@ -280,6 +287,20 @@ blockquote p, blockquote, figcaption, .mission{
     font-size: clamp(var(--font-size-small), var(--font-scaling-value) + var(--font-size-small), var(--font-max-small));
 }
 
+
+/*"ONZE MISSIE" page*/
+
+
+
+
+/*hides or shows images based based on screen size*/
+
+
+    .visible-from-tablet, .visible-from-desktop{
+        display: none;
+    }
+
+
 /*"INSCHRIJVEN" PAGE*/
 
 form{
@@ -295,16 +316,17 @@ form{
 }
 
 
-/*"ONZE MISSIE" page*/
 
+/*MEDIA QUERIES*/
 
+@media(min-width: 300px){
 
-/*hides or shows images based based on screen size*/
-
-
-    .visible-from-tablet, .visible-from-desktop{
-        display: none;
+    main, header, footer{
+        width: 96dvw;
+        margin: auto;
     }
+
+}
 
 @media (min-width: 380px){
 
@@ -329,6 +351,10 @@ form{
     .make-header-underlining{
         border-bottom: 0.1rem dashed var(--secondary-accent);
     }
+
+    .current{
+        border-bottom: 0.15rem solid var(--primary-accent);
+}
 }
 
 
@@ -383,6 +409,10 @@ form{
 
     .mission-top-pics, .mission-bottom-pics{
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .mission-top-pics figcaption, .mission-bottom-pics figcaption{
+        grid-area: 2 / 1 / 3 / 3;
     }
 
     /*end of "onze missie" page*/
@@ -443,6 +473,8 @@ form{
         justify-content: space-around;
     }
 
+    /*HOMEPAGE START*/
+
     .homepage-top-pics figure{
         grid-template-columns: 2fr 1fr 1fr;
     }
@@ -456,15 +488,25 @@ form{
         grid-area: 1 / 1 / 2 / 5;
     }
 
+    /*HOMEPAGE END*/
+
+    /*"ONZE MISSIE" START*/
+
     .mission-top-pics, .mission-bottom-pics, .picture-section{
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 1fr;
+    }
+
+    .mission-top-pics figcaption, .mission-bottom-pics figcaption{
+        grid-area: 2 / 1 / 3 / 5;
     }
 
     .mission{
         margin-top: 5rem;
         margin-bottom: 5rem;
     }
+
+    /*"ONZE MISSIE" END*/
 
     .prep-ingredients-section{
         grid-template-columns: repeat(2, 1fr);
