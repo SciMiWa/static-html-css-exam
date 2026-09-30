@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Inschrijven</title>
 </head>
-<body class="subscription-body">
+<body>
     <header id="header">
         <h1>Aan Tafel</h1>
         <nav>
@@ -20,8 +20,8 @@
                 <li>
                     <a href="recepten.html">Recepten</a>
                 </li>
-                <li class="current" aria-current="page">
-                    <a href="inschrijven.html">Inschrijven</a>
+                <li class="current">
+                    <a  aria-current="page" href="inschrijven.html">Inschrijven</a>
                 </li>
             </ul>
         </nav>
@@ -30,100 +30,33 @@
 
     <main>
 
-        <h2>Schrijf je onderaan in op de nieuwsbrief</h2>
+        <section class="subscription">
 
-        <p>Wat doen deze afbeeldingen hier? Wat heeft dit nu met eten te maken?
-            Deze website focust niet enkel op eten, maar op verbinding. De geschiedenis verbindt ons.
-        </p>
-        <p>Al zolang mensen samenleven, willen ze weten wat er in de wereld gebeurt.
-            In het oude Rome las men de Acta Diurna, aangeplakt op het Forum.
-            In China gingen hofbulletins van hand tot hand,
-            en op de agora van Athene riep een omroeper het nieuws af.
-            Later kopieerden schrijvers in Venetië nieuwsbrieven bij kaarslicht,
-            en besprak men de krant in koffiehuizen of 's avonds aan de keukentafel.
-            Nieuws was nooit iets wat je alleen las.
-            Je deelde het, net zoals je een maaltijd deelt.</p>
+            <h2>Schrijf je onderaan in op de nieuwsbrief</h2>
 
-        <p>Onze driemaandelijkse nieuwsbrief zet die traditie voort. Vier keer per jaar krijg je nieuwe recepten uit alle hoeken van de wereld,
-            verhalen over eetculturen en nieuws uit de voedselwereld.
-            Geen dagelijkse reclame, wel iets om samen aan tafel over te praten.
-            Vul hieronder je gegevens in en schuif mee aan.</p>
+            <p>Vier keer per jaar krijg je nieuwe recepten uit alle hoeken van de wereld,
+                verhalen over eetculturen en nieuws uit de voedselwereld.
+                Geen dagelijkse reclame, wel iets om samen aan tafel over te praten.
+                Vul hieronder je gegevens in en schuif mee aan.
+            </p>
 
-        <section class="subscription-top-pics" aria-label="1 tot 4 afbeeldingen over informatie of nieuwsbrief verdeling van verschillende tijdsperiodes">
-
-            <picture>
-                <source media="(min-width: 1024px)" srcset="img/inschrijven/desktop/i2.jpg">
-                <source media="(min-width: 600px) and (max-width: 1023px)" srcset="img/inschrijven/tablet/i2.jpg">
-                <img src="img/inschrijven/mobiel/i2.jpg" alt="Romeinen lezen de aangeplakte berichten van de Acta Diurna op het Forum">
-            </picture>
-
-            <picture class="tablet-pic">
-                <source media="(min-width: 1024px)" srcset="img/inschrijven/desktop/i3.jpg">
-                <source media="(min-width: 600px) and (max-width: 1023px)" srcset="img/inschrijven/tablet/i3.jpg">
-                <img src="img/inschrijven/mobiel/i3.jpg" alt="Vier Chinese ambtenaren lezen samen een hofbulletin op een rol in een binnenplaats">
-            </picture>
-
-            <picture class="desktop-pic">
-                <source media="(min-width: 1024px)" srcset="img/inschrijven/desktop/i1.jpg">
-                <source media="(min-width: 600px) and (max-width: 1023px)" srcset="img/inschrijven/tablet/i1.jpg">
-                <img src="img/inschrijven/mobiel/i1.jpg" alt="Omroeper met een perkamentrol verkondigt nieuws aan een menigte op de agora in Athene">
-            </picture>
-
-            <picture class="desktop-pic">
-                <source media="(min-width: 1024px)" srcset="img/inschrijven/desktop/i4.jpg">
-                <source media="(min-width: 600px) and (max-width: 1023px)" srcset="img/inschrijven/tablet/i4.jpg">
-                <img src="img/inschrijven/mobiel/i4.jpg" alt="Venetiaanse schrijver kopieert bij kaarslicht nieuwsbrieven met een ganzenveer terwijl anderen meekijken">
-            </picture>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="voornaam">Voornaam: (verplicht)</label>
+                    <input type="text" id="voornaam" required maxlength="100">
+                </div>
+                <div class="form-group">
+                    <label for="telnr">Telefoon of Gsm Nummer: </label>
+                    <input type="tel" id="telnr" maxlength="100">
+                </div>
+                <div class="form-group">
+                    <label for="e-mailadres">E-mailadres: (verplicht)</label>
+                    <input type="email" id="e-mailadres" required maxlength="254">
+                </div>
+                <button type="submit">Inschrijven voor nieuwsbrief</button>
+            </form>
 
         </section>
-
-
-        <form action="#" method="post">
-            <div class="form-group">
-                <label for="voornaam">Voornaam: (verplicht)</label>
-                <input type="text" id="voornaam" required maxlength="100">
-            </div>
-            <div class="form-group">
-                <label for="telnr">Telefoon of Gsm Nummer: </label>
-                <input type="tel" id="telnr" maxlength="100">
-            </div>
-            <div class="form-group">
-                <label for="e-mailadres">E-mailadres: (verplicht)</label>
-                <input type="email" id="e-mailadres" required maxlength="254">
-            </div>
-            <button type="submit">Inschrijven voor nieuwsbrief</button>
-        </form>
-
-
-
-        <section class="subscription-bottom-pics" aria-label="1 tot 4 afbeeldingen over nieuwsverdeling van verschillende tijdsperiodes">
-
-            <picture>
-                <source media="(min-width: 1024px)" srcset="img/inschrijven/desktop/i6.jpg">
-                <source media="(min-width: 600px) and (max-width: 1023px)" srcset="img/inschrijven/tablet/i6.jpg">
-                <img src="img/inschrijven/mobiel/i6.jpg" alt="Vrouw in een herberg wijst naar een broadside met houtsnede die aan een balk hangt">
-            </picture>
-
-            <picture class="tablet-pic">
-                <source media="(min-width: 1024px)" srcset="img/inschrijven/desktop/i5.jpg">
-                <source media="(min-width: 600px) and (max-width: 1023px)" srcset="img/inschrijven/tablet/i5.jpg">
-                <img src="img/inschrijven/mobiel/i5.jpg" alt="Verkoper deelt pamfletten uit aan marktbezoekers in een middeleeuwse stad">
-            </picture>
-
-            <picture class="desktop-pic">
-                <source media="(min-width: 1024px)" srcset="img/inschrijven/desktop/i7.jpg">
-                <source media="(min-width: 600px) and (max-width: 1023px)" srcset="img/inschrijven/tablet/i7.jpg">
-                <img src="img/inschrijven/mobiel/i7.jpg" alt="Heren met driekantige hoeden bespreken een krant in een koffiehuis bij het haardvuur">
-            </picture>
-
-            <picture class="desktop-pic">
-                <source media="(min-width: 1024px)" srcset="img/inschrijven/desktop/i8.jpg">
-                <source media="(min-width: 600px) and (max-width: 1023px)" srcset="img/inschrijven/tablet/i8.jpg">
-                <img src="img/inschrijven/mobiel/i8.jpg" alt="Gezin leest samen een geïllustreerde krant bij het licht van een olielamp">
-            </picture>
-
-        </section>
-
 
     </main>
 
@@ -131,13 +64,13 @@
 
     <footer>
 
-        <p id="footer-name">Aan Tafel</p>
+        <p>Aan Tafel</p>
 
-        <p>jonathan.smeets@ucll.student.be</p>
+        <a href="#header">Naar boven</a>
 
-        <nav>
-            <a href="#header">Naar boven</a>
-        </nav>
+        <address>
+            <a href="mailto:jonathan.smeets@student.ucll.be">Mail ons</a>
+        </address>
 
     </footer>
 

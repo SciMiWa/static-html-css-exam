@@ -1,36 +1,33 @@
 @font-face{
-    font-family: "merriweather-bold-italic";
+    font-family: "merriweather";
     src: url("fonts/merriweather-bold-italic.woff2");
     font-weight: 700;
     font-style: italic;
 }
 
 @font-face{
-    font-family: "merriweather-bold.woff2";
+    font-family: "merriweather";
     src: url("fonts/merriweather-bold.woff2");
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face{
-    font-family: "merriweather-italic.woff2";
+    font-family: "merriweather";
     src: url(fonts/merriweather-italic.woff2);
     font-weight: 400;
     font-style: italic;
 }
 
 @font-face{
-    font-family: "merriweather-regular.woff2";
+    font-family: "merriweather";
     src: url(fonts/merriweather-regular.woff2);
     font-weight: 400;
     font-style: normal;
 }
 
 :root{
-    --mf-regular: "merriweather-regular.woff2", serif;
-    --mf-bold-italic: "merriweather-bold-italic.woff2", serif;
-    --mf-italic: "merriweather-italic.woff2", serif;
-    --mf-bold: "merriweather-bold.woff2", serif;
+    --font-fam: "merriweather";
     --text-color:#33262A;
     --primary-accent: #8A2E3B;
     --secondary-accent: #C27A45;
@@ -63,7 +60,7 @@
     box-sizing: border-box;
 }
 
-ul{
+nav ul{
     list-style: none;
 }
 
@@ -84,17 +81,22 @@ body{
     flex-direction: column;
     gap: var(--primary-gap);
     background-color: var(--background-color);
-    font-family: var(--mf-regular);
+    font-family: var(--font-fam);
     min-height: 100dvh;
     line-height: var(--par-line-height);
 }
 
-section, article, aside, figure, main{
+section, article, aside, figure, main, div{
     display: grid;
 }
 
 main{
     gap: var(--secondary-gap);
+}
+
+main, header, footer{
+    width: 96dvw;
+    margin: auto;
 }
 
 section, article, aside{
@@ -109,7 +111,7 @@ figure{
     border-bottom: 0.15rem solid var(--primary-accent);
 }
 
-ol li{
+ol{
     margin-left: 1rem;
 }
 
@@ -121,8 +123,8 @@ li{
 /*Text related styling*/
 
 em{
-    font-family: var(--mf-bold-italic);
-    font-weight: bold;
+    font-family: var(--font-fam);
+    font-weight: 700;
     margin-left: var(--special-small-margin);
     margin-right: var(--special-small-margin);
 }
@@ -132,14 +134,14 @@ figcaption{
 }
 
 p{
-    font-family: var(--mf-regular);
+    font-family: var(--font-fam);
     color: var(--text-color);
     font-size: clamp(var(--font-size-regular), var(--font-scaling-value) + var(--font-size-regular), var(--font-max-p));
     max-width: 70ch;
 }
 
 h1, h2, h3, h4, h5{
-    font-family: var(--mf-bold);
+    font-family: var(--font-fam);
     padding-bottom: 0.5rem;
 }
 
@@ -186,7 +188,7 @@ h5{
 }
 
 button, label{
-    font-family: var(--mf-regular);
+    font-family: var(--font-fam);
 
 }
 
@@ -212,7 +214,7 @@ a:link, a:visited{
     color: var(--text-color);
     font-size: clamp(var(--font-size-a), var(--font-scaling-value) + var(--font-size-a), var(--font-max-a));
     text-decoration: none;
-    font-family: var(--mf-italic);
+    font-family: var(--font-fam);
     font-style: italic;
     margin-left: var(--special-small-margin);
     margin-right: var(--special-small-margin);
@@ -228,25 +230,38 @@ a:hover{
 
 /*HEADER and FOOTER*/
 
-header{
-    display: flex;
-    flex-direction: column;
-}
-
-header ul, footer{
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: var(--fourth-gap);
-    justify-content: space-between;
+header nav ul{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     border-top: 0.15rem solid var(--primary-accent);
     border-bottom: 0.15rem solid var(--primary-accent);
 }
 
-footer p, footer a:link{
-    font-size: var(--font-size-small);
+.make-header-underlining{
+    border-bottom: 0.1rem dashed var(--secondary-accent);
+}
+
+.current{
+    border-bottom: 0.15rem solid var(--primary-accent);
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    column-gap: var(--fourth-gap);
+}
+
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    border-top: 0.15rem solid var(--primary-accent);
+    border-bottom: 0.15rem solid var(--primary-accent);
 }
 
 
+footer p, footer a:link{
+    font-size: var(--font-size-small);
+}
 
 /*WEBPAGES*/
 
@@ -255,7 +270,6 @@ footer p, footer a:link{
 .homepage-top-pics{
     grid-template-columns: 1fr;
 }
-
 
 /*BLOCKQUOTE*/
 
@@ -269,37 +283,21 @@ blockquote{
 }
 
 blockquote p{
-    font-family: var(--mf-bold-italic);
+    font-family: var(--font-fam);
     font-style: italic;
-    font-weight: bold;
+    font-weight: 700;
     font-size: clamp(var(--font-size-medium), var(--font-scaling-value) + var(--font-size-medium), var(--font-max-h1));
     color: var(--primary-accent);
     text-align: center;
 }
 
-blockquote p, blockquote, figcaption, .mission{
+blockquote p, blockquote, figcaption, .mission, .recipe-article{
     margin: auto;
 }
-
-
 
 #savarin{
     font-size: clamp(var(--font-size-small), var(--font-scaling-value) + var(--font-size-small), var(--font-max-small));
 }
-
-
-/*"ONZE MISSIE" page*/
-
-
-
-
-/*hides or shows images based based on screen size*/
-
-
-    .visible-from-tablet, .visible-from-desktop{
-        display: none;
-    }
-
 
 /*"INSCHRIJVEN" PAGE*/
 
@@ -315,18 +313,16 @@ form{
     display: grid;
 }
 
+/*hides or shows content based based on screen size*/
+
+    .visible-from-tablet, .visible-from-desktop{
+        display: none;
+    }
+
 
 
 /*MEDIA QUERIES*/
 
-@media(min-width: 300px){
-
-    main, header, footer{
-        width: 96dvw;
-        margin: auto;
-    }
-
-}
 
 @media (min-width: 380px){
 
@@ -337,36 +333,32 @@ form{
 }
 
 
-
 /*REGULAR PHONE SIZE*/
 
-
-/*Creates grid and underlining for header nav ul, fixes wrapping at small width*/
-@media (max-width: 573px){
-    header nav ul{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .make-header-underlining{
-        border-bottom: 0.1rem dashed var(--secondary-accent);
-    }
-
-    .current{
-        border-bottom: 0.15rem solid var(--primary-accent);
-}
-}
 
 
 /*TABLET SIZE*/
 
 @media (min-width: 600px){
 
+    /*HEADER AND FOOTER START*/
+
+    header nav ul, footer{
+        display: flex;
+        column-gap: var(--fourth-gap);
+        justify-content: space-between;
+    }
+    .make-header-underlining{
+        border-bottom: none;
+    }
+
+    /*HEADER AND FOOTER END*/
+
     article.visible-from-tablet{
         display: grid;
     }
 
-    picture.visible-from-tablet, img.visible-from-desktop{
+    img.visible-from-tablet, picture.visible-from-tablet{
         display: block;
     }
 
@@ -383,7 +375,7 @@ form{
         grid-template-rows: 0.2fr 1.8fr;
     }
 
-    .news h3, .new-recipes h3 {
+    .news h3, .new-recipes h3{
         grid-area: 1 / 1 / 2 / 4;
     }
 
@@ -393,16 +385,16 @@ form{
 
     }
 
-    /*end of homepage*/
-
-    nav ul, footer{
-        justify-content: space-evenly;
-    }
-
     /*one of the homepage pics spans*/
 
     .spans-for-tablet-desktop{
         grid-area: 1 / 1 / 3 / 2;
+    }
+
+    /*end of homepage*/
+
+    nav ul, footer{
+        justify-content: space-evenly;
     }
 
     /*start of "onze missie" page*/
@@ -411,7 +403,7 @@ form{
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .mission-top-pics figcaption, .mission-bottom-pics figcaption{
+    .mission-top-pics figcaption, .mission-bottom-pics figcaption, .recipe-article figcaption{
         grid-area: 2 / 1 / 3 / 3;
     }
 
@@ -419,44 +411,29 @@ form{
 
     /*start of "recepten" page*/
 
-    .picture-section{
+    .recipe-article figure{
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    .picture-section img{
-        height: 100%;
-        object-fit: cover;
     }
 
     .prep-section ol, .ingredient-section ul{
         display: grid;
-        row-gap: var(--fourth-gap);
+        gap: var(--fourth-gap);
     }
 
+    .ingredient-section ul{
+        justify-self: start;
+    }
     /*end of "recepten" page*/
 
     /*start of "inschrijven" page*/
 
-
-    .subscription-body{
-        justify-content: space-between;
-    }
-
-    .subscription-top-pics, .subscription-bottom-pics{
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .subscription-body main{
-        gap: clamp(4rem, 4rem + var(--font-scaling-value), 10rem)
-    }
-
-    }
+}
 
     /*end of "inschrijven" page*/
 
 
 
-/*SMALL DESKTOP SIZE*/
+/*DESKTOP SIZE*/
 
 
 @media (min-width: 1024px){
@@ -465,11 +442,15 @@ form{
         display: grid;
     }
 
-    picture.visible-from-desktop{
+    picture.visible-from-desktop, img.visible-from-desktop{
         display: block;
     }
 
     nav ul, footer{
+        justify-content: space-around;
+    }
+
+    header nav ul{
         justify-content: space-around;
     }
 
@@ -508,7 +489,14 @@ form{
 
     /*"ONZE MISSIE" END*/
 
-    .prep-ingredients-section{
+    /*"RECEPTEN" START*/
+
+    .recipe-article figure{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows:  1fr 1fr 0.2fr;
+    }
+
+    .recipe-article div{
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -517,20 +505,21 @@ form{
         flex-direction: column;
     }
 
-    .subscription-top-pics, .subscription-bottom-pics{
-        margin: auto;
+    .recipe-article figcaption{
+        grid-area: 3 / 1 / 4 / 3;
+    }
+
+    .recipe-article{
         width: 90%;
-        scale: 0.9;
     }
+
+    /*"RECEPTEN" END*/
+
+    /*"INSCHRIJVEN" START*/
+
+    .subscription{
+        gap: var(--primary-gap);
+    }
+
+    /*"INSCHRIJVEN" END"*/
 }
-
-
-
-    /*LARGE DESKTOP SIZE*/
-
-    @media(min-width: 1600px){
-
-
-    }
-
-
