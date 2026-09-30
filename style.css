@@ -296,6 +296,11 @@ button{
     box-shadow: var(--text-shadow);
 }
 
+/*MISSION page*/
+
+.mission{
+    margin: auto;
+}
 
 
 
@@ -305,12 +310,19 @@ button{
     display: none;
 }
 
-.mission{
-    margin: auto;
+/* SMALL PHONE SIZE*/
+
+@media (max-width: 380px){
+
+    #footer-name{
+        display: none;
+    }
 }
 
 
-/*SMALL PHONE SIZE*/
+
+/*REGULAR PHONE SIZE*/
+
 
 
 @media (max-width: 450px){
