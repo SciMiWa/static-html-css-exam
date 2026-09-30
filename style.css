@@ -331,7 +331,7 @@ button{
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .onze-missie-header, .startpagina-header{
+    .make-header-underlining{
         border-bottom: 0.1rem dashed var(--secondary-accent);
     }
 }
