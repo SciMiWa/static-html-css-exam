@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Aan Tafel: StartPagina</title>
+    <title>Aan Tafel: startpagina</title>
 </head>
 
 <body class="index-body">
@@ -13,7 +13,7 @@
         <h1>Aan Tafel</h1>
         <nav>
             <ul>
-                <li id="active-page" class="make-header-underlining">
+                <li class="current make-header-underlining">
                     <a href="index.html">Startpagina</a>
                 </li>
                 <li class="make-header-underlining">
@@ -37,57 +37,54 @@
 
             <h2>Momenten die écht iets betekenen</h2>
             <p>Aan Tafel gaat over eten en over wat het met mensen doet.
-                Je vindt hier recepten uit vijf werelddelen/keukens, telkens met beelden van de streek
+                Je vindt hier recepten uit vijf werelddelen, telkens met beelden van de streek
                 en van mensen die er samen eten.
                 Zo zie je hoe elke cultuur op haar eigen manier aan tafel schuift.
             </p>
 
             <p>Daarnaast lees je nieuws uit de voedselwereld.</p>
 
-
-
-
             <figure>
 
-                <picture id="spans">
+                <picture id="spans-for-tablet-desktop">
                     <source media="(min-width: 1024px)" srcset="img/startpagina/desktop/h1.jpg">
-                    <source media="(min-width: 600px) and (max-width: 1023px)" srcset="img/startpagina/tablet/h1.jpg">
+                    <source media="(min-width: 600px)" srcset="img/startpagina/tablet/h1.jpg">
                     <img src="img/startpagina/mobiel/h1.jpg" alt="Oma dient een dampend gerecht op aan een lachende familie van drie generaties.">
                 </picture>
-                <picture class="tablet-pic" >
+
+                <picture class="visible-from-tablet" >
                     <source media="(min-width: 1024px)" srcset="img/startpagina/desktop/h2.jpg">
                     <img src="img/startpagina/tablet/h2.jpg" alt="Koppel deelt pasta en rode wijn aan een geruit tafelkleed in een trattoria.">
                 </picture>
-                <picture class="tablet-pic">
+
+                <picture class="visible-from-tablet">
                     <source media="(min-width: 1024px)" srcset="img/startpagina/desktop/h3.jpg">
                     <img src="img/startpagina/tablet/h3.jpg" alt="Twee koppels delen mezze en vis op een terras aan zee bij zonsondergang.">
                 </picture>
 
-                <picture class="desktop-pic">
-                    <img src="img/startpagina/desktop/h4.jpg" alt="Vrienden zitten 's avonds op lage plastic krukjes aan een straatkraampje in Hanoi en delen kommen pho en verse kruiden.">
-                </picture>
+                <img  class="visible-from-desktop" src="img/startpagina/desktop/h4.jpg" alt="Vrienden zitten 's avonds op lage plastic krukjes aan een straatkraampje in Hanoi en delen kommen pho en verse kruiden.">
 
-                <picture class="desktop-pic">
-                    <img src="img/startpagina/desktop/h5.jpg"
+                <img  class="visible-from-desktop" src="img/startpagina/desktop/h5.jpg"
                         alt="Vrouw ontbijt met koffie aan de keukentafel terwijl haar golden retriever zijn kop op haar knie legt">
-                </picture>
 
-                <figcaption>Afbeelding(en) van gezellige eetmomenten (AI-Generated)</figcaption>
+                <figcaption>Beelden op deze website werden gemaakt met AI</figcaption>
 
             </figure>
 
         </section>
 
 
-        <aside class="quote">
-            <q>
-                Iemand aan tafel uitnodigen,
-                is zorgen voor zijn geluk zolang
-                hij onder jouw dak is.
-            </q>
-            <p>Quote van: Anthelme Brillat-Savarin</p>
-        </aside>
+        <figure>
 
+            <blockquote>
+                <q>Iemand aan tafel uitnodigen is zorgen voor zijn geluk zolang
+                    hij onder jouw dak is.
+                </q>
+            </blockquote>
+
+            <figcaption>Anthelme Brillat-Savarin</figcaption>
+
+        </figure>
 
         <section class="news">
             <h3>Nieuws uit de voedselwereld</h3>
@@ -99,8 +96,9 @@
                     <img src="img/startpagina/mobiel/n1.jpg"
                         alt="Verkoopster geeft een klant een papieren zak groenten mee op een boerenmarkt.">
                 </picture>
-                <a href="#">Boerenmarkten trekken meer bezoekers dan ooit: consument kiest voor lokaal</a>
+                <h4>Boerenmarkten trekken meer bezoekers dan ooit: consument kiest voor lokaal</h4>
             </article>
+
             <article>
                 <picture>
                     <source media="(min-width: 1024px)" srcset="img/startpagina/desktop/n2.jpg">
@@ -108,26 +106,28 @@
                     <img src="img/startpagina/mobiel/n2.jpg"
                         alt="Buren van verschillende leeftijden oogsten samen tomaten in een buurttuin.">
                 </picture>
-                <a href="#">Buurtmoestuin brengt jong en oud samen rond de oogst</a>
+                <h4>Buurtmoestuin brengt jong en oud samen rond de oogst</h4>
             </article>
-            <article>
-                <picture class="tablet-pic">
+
+            <article class="visible-from-tablet">
+                <picture>
                     <source media="(min-width: 1024px)" srcset="img/startpagina/desktop/n3.jpg">
                     <img src="img/startpagina/tablet/n3.jpg"
                         alt="Chef werkt met een pincet een bord af in een kleine restaurantkeuken.">
                 </picture>
-                <a class="tablet-anchor" href="#">Kleine keuken, grote ambitie: chefs kiezen voor intieme restaurants</a>
+                <h4>Kleine keuken, grote ambitie: chefs kiezen voor intieme restaurants</h4>
             </article>
-            <article>
-                <picture class="tablet-pic">
-                    <source media="(min-width: 1024px)" srcset="img/startpagina/desktop/n4.jpg">
-                    <img src="img/startpagina//tablet/n4.jpg"
-                        alt="Moeder en twee kinderen kneden samen brooddeeg op een bebloemde tafel.">
-                </picture>
-                <a class="tablet-anchor" href="#">Zelf brood bakken wint terrein bij gezinnen met kinderen</a>
+
+            <article class="visible-from-desktop">
+
+                <img src="img/startpagina/desktop/n4.jpg"
+                    alt="Moeder en twee kinderen kneden samen brooddeeg op een bebloemde tafel.">
+
+                <h4>Zelf brood bakken wint terrein bij gezinnen met kinderen</h4>
             </article>
 
         </section>
+
 
         <section class="new-recipes">
 
@@ -140,32 +140,32 @@
                     <img src="img/startpagina/mobiel/r1.jpg"
                         alt="Shakshuka in een gietijzeren pan, met brood ernaast.">
                 </picture>
-                <a href="recepten.html#shakshuka">Shakshuka met eieren en peterselie.</a>
+                <h4><a href="recepten.html#shakshuka">Shakshuka met eieren en peterselie</a></h4>
             </article>
+
             <article>
                 <picture>
                     <source media="(min-width: 1024px)" srcset="img/startpagina/desktop/r2.jpg">
                     <source media="(min-width: 600px) and (max-width: 1023px)" srcset="img/startpagina/tablet/r2.jpg">
-                    <img src="img/startpagina/mobiel/r2.jpg" alt="Ramen gerecht in een kom.">
+                    <img src="img/startpagina/mobiel/r2.jpg" alt="Ramen in een kom.">
                 </picture>
-                <a href="recepten.html#ramen">Ramen met half gekookt ei, lente-ui, varkensvlees en nori.</a>
+                <h4><a href="recepten.html#ramen">Ramen met halfgekookt ei, lente-ui, varkensvlees en nori</a></h4>
             </article>
-            <article>
+
+            <article class="visible-from-tablet">
                 <picture>
                     <source media="(min-width: 1024px)" srcset="img/startpagina/desktop/r3.jpg">
-                    <source media="(min-width: 600px) and (max-width: 1023px)" srcset="img/startpagina/tablet/r3.jpg">
-                    <img src="img/startpagina/mobiel/r3.jpg"
-                        alt="Apple taart met rasterdeeg op een geruit doek, met een stuk op een bordje.">
-                    </picture>
-                    <a href="recepten.html#apple-pie">Appeltaart</a>
-            </article>
-            <article>
-                <picture>
-                    <source media="(min-width: 1024px)" srcset="img/startpagina/desktop/r4.jpg">
-                    <source media="(min-width: 600px) and (max-width: 1023px)" srcset="img/startpagina/tablet/r4.jpg">
-                    <img src="img/startpagina/mobiel/r4.jpg" alt="Brusselse wafel in een gezellig café.">
+                    <img src="img/startpagina/tablet/r3.jpg"
+                        alt="Appeltaart met rasterdeeg op een geruit doek, met een stuk op een bordje.">
                 </picture>
-                <a href="recepten.html#waffle">Brusselse Wafel met Aardbeien en poedersuiker.</a>
+                    <h4><a href="recepten.html#apple-pie">Appeltaart</a></h4>
+            </article>
+
+            <article class="visible-from-desktop">
+                <picture>
+                    <img src="img/startpagina/desktop/r4.jpg" alt="Brusselse wafel in een gezellig café.">
+                </picture>
+                <h4><a href="recepten.html#waffle">Brusselse wafel met aardbeien en poedersuiker</a></h4>
             </article>
 
         </section>
@@ -175,13 +175,13 @@
 
     <footer>
 
-        <p id="footer-name">Aan Tafel</p>
+        <p>Aan Tafel</p>
 
-        <p>jonathan.smeets@ucll.student.be</p>
+        <a href="#header">Naar boven</a>
 
-        <nav>
-            <a href="#header">Naar boven</a>
-        </nav>
+        <address>
+            <a href="mailto:jonathan.smeets@student.ucll.be">Mail ons</a>
+        </address>
 
     </footer>
 
