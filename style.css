@@ -135,7 +135,7 @@ em{
 }
 
 /*clamps*/
-figcaption, p, h1, h2, h3, h4, h5, a:link, a:visited, label, button{
+figcaption, p, h1, h2, h3, h4, h5, label, button{
     font-size: clamp(var(--clamp-min), var(--font-scaling-value) + var(--clamp-min), var(--clamp-max));
 }
 
@@ -172,11 +172,6 @@ h4{
 h5{
     --clamp-min: var(--font-size-regular);
     --clamp-max: var(--font-max-h4);
-}
-
-a:link, a:visited{
-    --clamp-min: var(--font-size-a);
-    --clamp-max: var(--font-max-a);
 }
 
 label, button{
@@ -241,6 +236,7 @@ a:link, a:visited{
     text-decoration: none;
     font-style: italic;
     margin-inline: var(--special-small-margin);
+    font-size: clamp(var(--font-size-a), var(--font-scaling-value) + var(--font-size-a), var(--font-max-a));
 }
 
 a:hover{
