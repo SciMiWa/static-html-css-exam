@@ -241,7 +241,6 @@ button{
 }
 
 button:hover{
-    color: var(--text-color);
     background-color: var(--secondary-accent);
 }
 
@@ -326,10 +325,6 @@ form{
     background-color: var(--background-color);
     margin: auto;
     padding-block: 5dvw;
-}
-
-form div{
-    display: grid;
 }
 
 form button{
