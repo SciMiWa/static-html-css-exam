@@ -236,7 +236,7 @@ a:link, a:visited{
     text-decoration: none;
     font-style: italic;
     margin-inline: var(--special-small-margin);
-    font-size: clamp(var(--font-size-a), var(--font-scaling-value) + var(--font-size-a), var(--font-max-a));
+    font-size: clamp(1rem, 1dvw + 1rem, 1.245rem);
 }
 
 a:hover{
