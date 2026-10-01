@@ -109,7 +109,7 @@ figure{
     gap: var(--fourth-gap);
 }
 
-#current{
+#current, header nav ul, footer{
     border-bottom: 0.15rem solid var(--primary-accent);
 }
 
@@ -131,8 +131,7 @@ body, button, input{
 
 em{
     font-weight: 700;
-    margin-left: var(--special-small-margin);
-    margin-right: var(--special-small-margin);
+    margin-inline: var(--special-small-margin);
 }
 
 /*clamps*/
@@ -253,8 +252,7 @@ a:link, a:visited{
     color: var(--text-color);
     text-decoration: none;
     font-style: italic;
-    margin-left: var(--special-small-margin);
-    margin-right: var(--special-small-margin);
+    margin-inline: var(--special-small-margin);
 }
 
 
@@ -271,7 +269,6 @@ header nav ul{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     border-top: 0.15rem solid var(--primary-accent);
-    border-bottom: 0.15rem solid var(--primary-accent);
 }
 
 .make-header-underlining{
@@ -287,7 +284,6 @@ footer{
     display: flex;
     justify-content: space-evenly;
     border-top: 0.15rem solid var(--primary-accent);
-    border-bottom: 0.15rem solid var(--primary-accent);
 }
 
 
@@ -309,10 +305,8 @@ footer p, footer a:link, footer a:visited{
 blockquote{
     display: flex;
     flex-flow: column wrap;
-    border-top: 0.4rem double var(--secondary-accent);
-    border-bottom: 0.4rem double var(--secondary-accent);
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    border-block: 0.4rem double var(--secondary-accent);
+    padding-block: 0.5rem;
 }
 
 blockquote p{
@@ -338,8 +332,7 @@ form{
     gap: var(--primary-gap);
     background-color: var(--background-color);
     margin: auto;
-    padding-top: 5dvw;
-    padding-bottom: 5dvw;
+    padding-block: 5dvw;
 }
 
 form div{
