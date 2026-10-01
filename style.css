@@ -524,6 +524,13 @@ form{
 /*Roughly 40% or more laptop would have this screen width size*/
 @media(min-width: 1300px){
 
+    body, main{
+        gap: var(--fourth-gap);
+    }
+
+
+    /*HOMEPAGE START*/
+
     /*These settings lower the distance between content in the news
     and new-recipes sections. Without these the distance would be obviously
     large on around 40% or more laptops.*/
@@ -540,9 +547,17 @@ form{
         grid-template-rows: 0.5fr 0.4fr;
     }
 
-    body, main{
-        gap: var(--fourth-gap);
+    /*HOMEPAGE END*/
+
+    .recipe-article picture, .recipe-article img{
+        max-width: min(35dvw);
+        max-height: min(40dvh);
+        margin: auto;
     }
 
+    .recipe-article figure{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 0.8fr 0.2fr;
+    }
 
 }
