@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Inschrijven</title>
+    <title>Aan Tafel: Inschrijven</title>
 </head>
 <body>
     <header id="header">
@@ -32,26 +32,36 @@
 
         <section class="subscription">
 
-            <h2>Schrijf je onderaan in op de nieuwsbrief</h2>
+            <h2>Schrijf je in op de nieuwsbrief</h2>
 
             <p>Vier keer per jaar krijg je nieuwe recepten uit alle hoeken van de wereld,
                 verhalen over eetculturen en nieuws uit de voedselwereld.
                 Geen dagelijkse reclame, wel iets om samen aan tafel over te praten.
-                Vul hieronder je gegevens in en schuif mee aan.
+                Vul hieronder je gegevens in, en schuif mee aan.
             </p>
 
             <form action="#" method="post">
-                <div class="form-group">
+                <div class="checkbox-section">
+                    <label for="optie-Mediterraans">Mediterraans</label>
+                    <input type="checkbox" id="keuken-opties" name="optie-Mediterraans">
+                    <label for="optie-Aziatisch">Aziatisch Staten</label>
+                    <input type="checkbox" id="keuken-opties" name="optie-Aziatisch">
+                    <label for="optie-Verenigde-Staten">Verenigde Staten</label>
+                    <input type="checkbox" id="keuken-opties" name="optie-Verenigde-Staten">
+                    <label for="optie-Europees">Europees</label>
+                    <input type="checkbox" id="keuken-opties" name="optie-Europees">
+                    <label for="optie-Afrikaans">Afrikaans</label>
+                    <input type="checkbox" id="keuken-opties" name="optie-Afrikaans">
+                </div>
+
+                <div>
                     <label for="voornaam">Voornaam: (verplicht)</label>
-                    <input type="text" id="voornaam" required maxlength="100">
+                    <input type="text" id="voornaam" required maxlength="100" name="voornaam">
                 </div>
-                <div class="form-group">
-                    <label for="telnr">Telefoon of Gsm Nummer: </label>
-                    <input type="tel" id="telnr" maxlength="100">
-                </div>
-                <div class="form-group">
+
+                <div>
                     <label for="e-mailadres">E-mailadres: (verplicht)</label>
-                    <input type="email" id="e-mailadres" required maxlength="254">
+                    <input type="email" id="e-mailadres" required maxlength="254" name="e-mailadres">
                 </div>
                 <button type="submit">Inschrijven voor nieuwsbrief</button>
             </form>

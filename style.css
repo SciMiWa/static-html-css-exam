@@ -27,7 +27,7 @@
 }
 
 :root{
-    --font-fam: "merriweather";
+    --font-fam: "merriweather", serif;
     --text-color:#33262A;
     --primary-accent: #8A2E3B;
     --secondary-accent: #C27A45;
@@ -52,6 +52,8 @@
     --font-max-a: 1.245rem;
     --font-scaling-value: 1dvw;
     --special-small-margin: 0.1rem;
+    --clamp-min: 0rem;
+    --clamp-max: 0rem;
 }
 
 *{
@@ -64,7 +66,7 @@ nav ul{
     list-style: none;
 }
 
-img, picture, blockquote{
+img, picture{
     max-width: 100%;
     max-height: 100%;
     height: 100%;
@@ -81,7 +83,6 @@ body{
     flex-direction: column;
     gap: var(--primary-gap);
     background-color: var(--background-color);
-    font-family: var(--font-fam);
     min-height: 100dvh;
     line-height: var(--par-line-height);
 }
@@ -94,7 +95,7 @@ main{
     gap: var(--secondary-gap);
 }
 
-main, header, footer, form button{
+main, header, footer{
     width: 96dvw;
     margin: auto;
 }
@@ -111,7 +112,7 @@ figure{
     border-bottom: 0.15rem solid var(--primary-accent);
 }
 
-ol{
+ol, .recipe-article ul{
     margin-left: 1rem;
 }
 
@@ -123,26 +124,38 @@ li{
 
 /*Text related styling*/
 
-em{
+body, button, input{
     font-family: var(--font-fam);
+}
+
+em{
     font-weight: 700;
     margin-left: var(--special-small-margin);
     margin-right: var(--special-small-margin);
 }
+/*clamps start*/
+figcaption, p{
+    font-size: clamp(var(--clamp-min), var(--font-scaling-value) + var(--clamp-min), var(--clamp-max));
+}
 
 figcaption{
-    font-size: clamp(var(--font-size-small), var(--font-scaling-value) + var(--font-size-small), var(--font-max-p));
+    --clamp-min: var(--font-size-small);
+    --clamp-max: var(--font-max-p);
 }
 
 p{
-    font-family: var(--font-fam);
+    --clamp-min: var(--font-size-regular);
+    --clamp-max: var(--font-max-p);
+}
+
+/*clamps end*/
+
+p{
     color: var(--text-color);
-    font-size: clamp(var(--font-size-regular), var(--font-scaling-value) + var(--font-size-regular), var(--font-max-p));
     max-width: 70ch;
 }
 
 h1, h2, h3, h4, h5{
-    font-family: var(--font-fam);
     padding-bottom: 0.5rem;
 }
 
@@ -188,11 +201,6 @@ h5{
     font-size: clamp(var(--font-size-regular), var(--font-scaling-value) + var(--font-size-regular), var(--font-max-h4));
 }
 
-button, label{
-    font-family: var(--font-fam);
-
-}
-
 label, button{
     font-size: clamp(var(--font-size-regular), var(--font-scaling-value) + var(--font-size-regular), var(--font-size-large));
 
@@ -200,14 +208,13 @@ label, button{
 
 
 button{
-    font-size: clamp(var(--font-size-regular), var(--font-scaling-value) + var(--font-size-regular), var(--font-size-large));
     color: var(--text-color);
     background-color: var(--background-color);
     transition: all 1s ease-in-out;
 }
 
 button:hover{
-    color: var(--primary-accent);
+    color: var(--text-color);
     background-color: var(--secondary-accent);
 }
 
@@ -215,7 +222,6 @@ a:link, a:visited{
     color: var(--text-color);
     font-size: clamp(var(--font-size-a), var(--font-scaling-value) + var(--font-size-a), var(--font-max-a));
     text-decoration: none;
-    font-family: var(--font-fam);
     font-style: italic;
     margin-left: var(--special-small-margin);
     margin-right: var(--special-small-margin);
@@ -245,7 +251,6 @@ header nav ul{
 header{
     display: flex;
     flex-direction: column;
-    column-gap: var(--fourth-gap);
 }
 
 footer{
@@ -256,7 +261,7 @@ footer{
 }
 
 
-footer p, footer a:link{
+footer p, footer a:link, footer a:visited{
     font-size: var(--font-size-small);
 }
 
@@ -281,7 +286,6 @@ blockquote{
 }
 
 blockquote p{
-    font-family: var(--font-fam);
     font-style: italic;
     font-weight: 700;
     font-size: clamp(var(--font-size-medium), var(--font-scaling-value) + var(--font-size-medium), var(--font-max-h1));
@@ -289,31 +293,50 @@ blockquote p{
     text-align: center;
 }
 
-blockquote p, blockquote, figcaption, .mission, .recipe-article{
+blockquote p, blockquote, figcaption, .mission, .recipe-article, form button{
     margin: auto;
 }
 
-#savarin{
-    font-size: clamp(var(--font-size-small), var(--font-scaling-value) + var(--font-size-small), var(--font-max-small));
-}
+/*RECIPES PAGE*/
+
 
 /*"INSCHRIJVEN" PAGE*/
 
 form{
     display: grid;
-    margin: auto;
-    width: 75dvw;
+    width: 70dvw;
     gap: var(--primary-gap);
     background-color: var(--background-color);
 }
 
-.form-group{
+form div{
     display: grid;
 }
 
 form button{
     width: fit-content;
+    padding: 0.5rem;
 }
+
+.checkbox-section{
+    gap: var(--fourth-gap);
+}
+
+.checkbox-section input{
+    grid-column: 2 / 3;
+}
+
+input[type="checkbox"]{
+    accent-color: var(--primary-accent);
+}
+
+input{
+    color: var(--primary-accent);
+    font-size: large;
+}
+
+
+
 
 
 
@@ -350,8 +373,7 @@ form button{
 
     header nav ul, footer{
         display: flex;
-        column-gap: var(--fourth-gap);
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
     .make-header-underlining{
         border-bottom: none;
@@ -377,7 +399,7 @@ form button{
 
     .news, .new-recipes{
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 0.2fr 1.8fr;
+        grid-template-rows: 1fr 5fr;
     }
 
     .news h3, .new-recipes h3{
@@ -397,10 +419,6 @@ form button{
     }
 
     /*end of homepage*/
-
-    nav ul, footer{
-        justify-content: space-evenly;
-    }
 
     /*start of "onze missie" page*/
 
@@ -451,11 +469,7 @@ form button{
         display: block;
     }
 
-    nav ul, footer{
-        justify-content: space-around;
-    }
-
-    header nav ul{
+    header nav ul, footer{
         justify-content: space-around;
     }
 
@@ -466,7 +480,6 @@ form button{
     }
 
     .news, .new-recipes{
-        grid-template-rows: 0.2fr 1.8fr;
         grid-template-columns: repeat(4, 1fr);
     }
 
@@ -478,7 +491,7 @@ form button{
 
     /*"ONZE MISSIE" START*/
 
-    .mission-top-pics, .mission-bottom-pics, .picture-section{
+    .mission-top-pics, .mission-bottom-pics{
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 1fr;
     }
@@ -497,7 +510,6 @@ form button{
     /*"RECEPTEN" START*/
 
     .recipe-article figure{
-        grid-template-columns: repeat(2, 1fr);
         grid-template-rows:  1fr 1fr 0.2fr;
     }
 
@@ -526,30 +538,23 @@ form button{
         gap: var(--primary-gap);
     }
 
+
     /*"INSCHRIJVEN" END"*/
 }
 
 /*Roughly 40% or more laptop would have this screen width size*/
-@media(min-width: 1300px){
+@media(min-width: 1250px){
 
     body, main{
         gap: var(--fourth-gap);
     }
-
 
     /*HOMEPAGE START*/
 
     /*These settings lower the distance between content in the news
     and new-recipes sections. Without these the distance would be obviously
     large on around 40% or more laptops.*/
-    .news, .new-recipes{
-        grid-template-rows: 0.2fr 1.8fr;
-        grid-template-columns: repeat(4, 1fr);
-    }
 
-    .news h3, .new-recipes h3{
-        grid-area: 1 / 1 / 2 / 5;
-    }
 
     .news article, .new-recipes article{
         grid-template-rows: 0.5fr 0.4fr;
@@ -558,8 +563,8 @@ form button{
     /*HOMEPAGE END*/
 
     .recipe-article picture, .recipe-article img{
-        max-width: min(35dvw);
-        max-height: min(40dvh);
+        max-width: 35dvw;
+        max-height: 40dvh;
         margin: auto;
     }
 
