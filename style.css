@@ -224,7 +224,6 @@ h5{
 
 button{
     background-color: var(--background-color);
-    transition: all 1s ease-in-out;
 }
 
 button:hover{
@@ -296,7 +295,7 @@ blockquote p{
     text-align: center;
 }
 
-blockquote p, blockquote, figcaption, .mission, .recipe-article, form button{
+blockquote p, blockquote, figcaption, .mission, .recipe-article, form button, .subscription, form, input, label, button{
     margin: auto;
 }
 
@@ -305,16 +304,18 @@ blockquote p, blockquote, figcaption, .mission, .recipe-article, form button{
 
 /*"INSCHRIJVEN" PAGE*/
 
+
 form{
     display: grid;
-    width: 70dvw;
-    gap: var(--primary-gap);
-    margin: auto;
-    padding-block: 5dvw;
+    gap: var(--tertiary-gap);
+    width: 80dvw;
+}
+
+form div, input, label, button{
+    width: 100%;
 }
 
 form button{
-    width: fit-content;
     padding: 0.5rem;
 }
 
@@ -335,6 +336,8 @@ input[type="checkbox"]{
 input{
     color: var(--primary-accent);
     font-size: var(--font-size-large);
+    border: 0.1rem solid var(--text-color);
+
 }
 
 /*hides or shows content based based on screen size*/
@@ -434,6 +437,13 @@ input{
     }
     /*end of "recepten" page*/
 
+
+    /*"INSCHRIJVEN" PAGE START*/
+    /*I decrease the size to keep the form reasonably wide but not insanely wide as screens become bigger*/
+    form{
+        width: 70dvw;
+    }
+
 }
 
 /*DESKTOP SIZE*/
@@ -515,6 +525,11 @@ input{
     }
 
 
+    form{
+        width: 60dvw;
+    }
+
+
     /*"INSCHRIJVEN" END"*/
 }
 
@@ -546,6 +561,11 @@ input{
 
     .recipe-article figure{
         grid-template-rows: 0.8fr 0.2fr;
+    }
+
+
+    form{
+        width: 55dvw;
     }
 
 }
