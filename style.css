@@ -328,6 +328,8 @@ form button{
 
 input[type="checkbox"]{
     accent-color: var(--primary-accent);
+    width: 1em;
+    height: 1em;
 }
 
 input{
