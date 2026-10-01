@@ -47,7 +47,6 @@
     --font-max-h2: 1.875rem;
     --font-max-h3: 1.5rem;
     --font-max-h4: 1.245rem;
-    --font-max-small: 1rem;
     --font-max-p: 1.245rem;
     --font-max-a: 1.245rem;
     --font-scaling-value: 1dvw;
@@ -286,9 +285,7 @@ footer p, footer a:link, footer a:visited{
 
 /*HOMEPAGE*/
 
-.homepage-top-pics{
-    grid-template-columns: 1fr;
-}
+
 
 /*BLOCKQUOTE*/
 
@@ -403,7 +400,6 @@ input{
     }
 
     .news article, .new-recipes article{
-        grid-template-columns: 1fr;
         grid-template-rows: repeat(2, 1fr);
 
     }
