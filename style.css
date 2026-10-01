@@ -68,9 +68,9 @@ nav ul{
 }
 
 img, picture{
-    max-width: 100%;
     max-height: 100%;
     height: 100%;
+    /*Instead max-width because the images didn't fill the space as desired*/
     width: 100%;
 }
 
@@ -320,7 +320,6 @@ form{
     display: grid;
     width: 70dvw;
     gap: var(--primary-gap);
-    background-color: var(--background-color);
     margin: auto;
     padding-block: 5dvw;
 }
