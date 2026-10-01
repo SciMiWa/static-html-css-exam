@@ -135,12 +135,8 @@ em{
 }
 
 /*clamps*/
-figcaption, p, h1, h2, h3, h5, a:link, a:visited, label, button{
+figcaption, p, h1, h2, h3, h4, h5, a:link, a:visited, label, button{
     font-size: clamp(var(--clamp-min), var(--font-scaling-value) + var(--clamp-min), var(--clamp-max));
-}
-
-h4{
-    font-size: clamp(var(--font-size-regular), var(--font-scaling-value) + var(--font-size-medium), var(--font-max-h4));
 }
 
 figcaption{
@@ -169,9 +165,8 @@ h3{
 }
 
 h4{
-    --clamp-min: var(--font-size-regular);
+    --clamp-min: var(--font-size-medium);
     --clamp-max: var(--font-max-h4);
-    --clamp-ideal: var(--font-size-medium);
 }
 
 h5{
