@@ -189,9 +189,6 @@ label, button{
     --clamp-max: var(--font-size-large);
 }
 
-
-/*clamps end*/
-
 p{
     color: var(--text-color);
     max-width: 70ch;
@@ -255,13 +252,10 @@ a:link, a:visited{
     margin-inline: var(--special-small-margin);
 }
 
-
-
 a:hover{
     color: var(--primary-accent);
     text-decoration: underline solid var(--primary-accent) 0.05rem;
 }
-
 
 /*HEADER and FOOTER*/
 
@@ -285,7 +279,6 @@ footer{
     justify-content: space-evenly;
     border-top: 0.15rem solid var(--primary-accent);
 }
-
 
 footer p, footer a:link, footer a:visited{
     font-size: var(--font-size-small);
@@ -361,22 +354,13 @@ input{
     font-size: large;
 }
 
-
-
-
-
-
-
 /*hides or shows content based based on screen size*/
 
     .visible-from-tablet, .visible-from-desktop{
         display: none;
     }
 
-
-
 /*MEDIA QUERIES*/
-
 
 @media (min-width: 380px){
 
@@ -386,18 +370,13 @@ input{
     }
 }
 
-
-/*REGULAR PHONE SIZE*/
-
-
-
 /*TABLET SIZE*/
 
 @media (min-width: 600px){
 
     /*HEADER AND FOOTER START*/
 
-    header nav ul, footer{
+    header nav ul{
         display: flex;
         justify-content: space-evenly;
     }
@@ -591,7 +570,6 @@ input{
     }
 
     .recipe-article figure{
-        grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 0.8fr 0.2fr;
     }
 
