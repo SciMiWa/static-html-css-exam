@@ -54,6 +54,7 @@
     --special-small-margin: 0.1rem;
     --clamp-min: 0rem;
     --clamp-max: 0rem;
+    --clamp-ideal: 0rem;
 }
 
 *{
@@ -133,9 +134,14 @@ em{
     margin-left: var(--special-small-margin);
     margin-right: var(--special-small-margin);
 }
-/*clamps start*/
-figcaption, p{
+
+/*clamps*/
+figcaption, p, h1, h2, h3, h5, a:link, a:visited, label, button{
     font-size: clamp(var(--clamp-min), var(--font-scaling-value) + var(--clamp-min), var(--clamp-max));
+}
+
+h4{
+    font-size: clamp(var(--font-size-regular), var(--font-scaling-value) + var(--font-size-medium), var(--font-max-h4));
 }
 
 figcaption{
@@ -147,6 +153,43 @@ p{
     --clamp-min: var(--font-size-regular);
     --clamp-max: var(--font-max-p);
 }
+
+h1{
+    --clamp-min: var(--font-size-extra-large);
+    --clamp-max: var(--font-max-h1);
+}
+
+h2{
+    --clamp-min: var(--font-size-large);
+    --clamp-max: var(--font-max-h2);
+}
+
+h3{
+    --clamp-min: var(--font-size-medium);
+    --clamp-max: var(--font-max-h3);
+}
+
+h4{
+    --clamp-min: var(--font-size-regular);
+    --clamp-max: var(--font-max-h4);
+    --clamp-ideal: var(--font-size-medium);
+}
+
+h5{
+    --clamp-min: var(--font-size-regular);
+    --clamp-max: var(--font-max-h4);
+}
+
+a:link, a:visited{
+    --clamp-min: var(--font-size-a);
+    --clamp-max: var(--font-max-a);
+}
+
+label, button{
+    --clamp-min: var(--font-size-regular);
+    --clamp-max: var(--font-size-large);
+}
+
 
 /*clamps end*/
 
@@ -164,10 +207,8 @@ h1, h2, h3{
 }
 
 h1{
-    font-size: clamp(var(--font-size-extra-large), var(--font-scaling-value) + var(--font-size-extra-large), var(--font-max-h1));
     margin-top: 1.5rem;
     margin-bottom: 1rem;
-
 }
 
 h2, h3{
@@ -176,20 +217,17 @@ h2, h3{
 }
 
 h2{
-    font-size: clamp(var(--font-size-large), var(--font-scaling-value) + var(--font-size-large), var(--font-max-h2));
     margin-top: 1.2rem;
     margin-bottom: 0.8rem;
 }
 
 h3{
-    font-size: clamp(var(--font-size-medium), var(--font-scaling-value) + (var(--font-size-medium)), var(--font-max-h3));
     margin-top: 1rem;
     margin-bottom: 0.7rem;
 }
 
 
 h4{
-    font-size: clamp(var(--font-size-regular), var(--font-scaling-value) + var(--font-size-medium), var(--font-max-h4));
     color: var(--text-color);
     margin-top: 0.9rem;
     margin-bottom: 0.6rem;
@@ -198,14 +236,7 @@ h4{
 h5{
     margin-top: 0.8rem;
     margin-bottom: 0.4rem;
-    font-size: clamp(var(--font-size-regular), var(--font-scaling-value) + var(--font-size-regular), var(--font-max-h4));
 }
-
-label, button{
-    font-size: clamp(var(--font-size-regular), var(--font-scaling-value) + var(--font-size-regular), var(--font-size-large));
-
-}
-
 
 button{
     color: var(--text-color);
@@ -220,7 +251,6 @@ button:hover{
 
 a:link, a:visited{
     color: var(--text-color);
-    font-size: clamp(var(--font-size-a), var(--font-scaling-value) + var(--font-size-a), var(--font-max-a));
     text-decoration: none;
     font-style: italic;
     margin-left: var(--special-small-margin);
@@ -307,6 +337,9 @@ form{
     width: 70dvw;
     gap: var(--primary-gap);
     background-color: var(--background-color);
+    margin: auto;
+    padding-top: 5dvw;
+    padding-bottom: 5dvw;
 }
 
 form div{
