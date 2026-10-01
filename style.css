@@ -236,6 +236,7 @@ a:link, a:visited{
     text-decoration: none;
     font-style: italic;
     margin-inline: var(--special-small-margin);
+    /*Custom properties caused invisibility issues in the header on webkit (safari)*/
     font-size: clamp(1rem, 1dvw + 1rem, 1.245rem);
 }
 
