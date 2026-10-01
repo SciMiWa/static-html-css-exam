@@ -107,7 +107,7 @@ figure{
     gap: var(--fourth-gap);
 }
 
-.current{
+#current{
     border-bottom: 0.15rem solid var(--primary-accent);
 }
 
@@ -118,6 +118,7 @@ ol{
 li{
     max-width: 70ch;
 }
+
 
 
 /*Text related styling*/
@@ -239,10 +240,6 @@ header nav ul{
 
 .make-header-underlining{
     border-bottom: 0.1rem dashed var(--secondary-accent);
-}
-
-.current{
-    border-bottom: 0.15rem solid var(--primary-accent);
 }
 
 header{
@@ -522,4 +519,28 @@ form{
     }
 
     /*"INSCHRIJVEN" END"*/
+}
+
+/*Roughly 40% or more laptop would have this screen width size*/
+@media(min-width: 1300px){
+
+    /*These settings lower the distance between content in the news
+    and new-recipes sections. Without these the distance would be obviously
+    large on around 40% or more laptops.*/
+    .news, .new-recipes{
+        grid-template-rows: 0.2fr 1.8fr;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .news h3, .new-recipes h3{
+        grid-area: 1 / 1 / 2 / 5;
+    }
+
+    .news article, .new-recipes article{
+        grid-template-rows: 1fr 0.5fr;
+    }
+
+    body, main{
+        gap: var(--fourth-gap);
+    }
 }
