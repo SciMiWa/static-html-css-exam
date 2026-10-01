@@ -94,7 +94,7 @@ main{
     gap: var(--secondary-gap);
 }
 
-main, header, footer{
+main, header, footer, form button{
     width: 96dvw;
     margin: auto;
 }
@@ -260,6 +260,7 @@ footer p, footer a:link{
     font-size: var(--font-size-small);
 }
 
+
 /*WEBPAGES*/
 
 /*HOMEPAGE*/
@@ -301,7 +302,7 @@ blockquote p, blockquote, figcaption, .mission, .recipe-article{
 form{
     display: grid;
     margin: auto;
-    width: 50dvh;
+    width: 75dvw;
     gap: var(--primary-gap);
     background-color: var(--background-color);
 }
@@ -309,6 +310,13 @@ form{
 .form-group{
     display: grid;
 }
+
+form button{
+    width: fit-content;
+}
+
+
+
 
 /*hides or shows content based based on screen size*/
 
