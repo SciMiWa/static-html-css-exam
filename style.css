@@ -69,8 +69,8 @@ nav ul{
 img, picture{
     max-height: 100%;
     height: 100%;
-    /*Instead max-width because the images didn't fill the space as desired*/
     width: 100%;
+    max-width: 100%;
 }
 
 img{
