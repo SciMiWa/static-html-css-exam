@@ -127,6 +127,7 @@ li{
 
 body, button, input{
     font-family: var(--font-fam);
+    color: var(--text-color);
 }
 
 em{
@@ -190,7 +191,6 @@ label, button{
 }
 
 p{
-    color: var(--text-color);
     max-width: 70ch;
 }
 
@@ -224,7 +224,6 @@ h3{
 
 
 h4{
-    color: var(--text-color);
     margin-top: 0.9rem;
     margin-bottom: 0.6rem;
 }
@@ -235,7 +234,6 @@ h5{
 }
 
 button{
-    color: var(--text-color);
     background-color: var(--background-color);
     transition: all 1s ease-in-out;
 }
