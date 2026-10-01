@@ -448,11 +448,11 @@ input{
 
     /*start of "onze missie" page*/
 
-    .mission-top-pics, .mission-bottom-pics{
+    .mission-tb-pics{
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .mission-top-pics figcaption, .mission-bottom-pics figcaption, .recipe-article figcaption{
+    .mission-tb-pics figcaption, .recipe-article figcaption{
         grid-area: 2 / 1 / 3 / -1;
     }
 
@@ -513,12 +513,12 @@ input{
 
     /*"ONZE MISSIE" START*/
 
-    .mission-top-pics, .mission-bottom-pics{
+    .mission-tb-pics{
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 1fr;
     }
 
-    .mission-top-pics figcaption, .mission-bottom-pics figcaption{
+    .mission-tb-pics-figcaption{
         grid-area: 2 / 1 / 3 / -1;
     }
 
