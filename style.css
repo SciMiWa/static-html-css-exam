@@ -537,10 +537,12 @@ form{
     }
 
     .news article, .new-recipes article{
-        grid-template-rows: 1fr 0.5fr;
+        grid-template-rows: 0.5fr 0.4fr;
     }
 
     body, main{
         gap: var(--fourth-gap);
     }
+
+
 }
