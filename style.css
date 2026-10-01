@@ -335,7 +335,7 @@ input[type="checkbox"]{
 
 input{
     color: var(--primary-accent);
-    font-size: large;
+    font-size: var(--font-size-large);
 }
 
 /*hides or shows content based based on screen size*/
@@ -435,13 +435,7 @@ input{
     }
     /*end of "recepten" page*/
 
-    /*start of "inschrijven" page*/
-
 }
-
-    /*end of "inschrijven" page*/
-
-
 
 /*DESKTOP SIZE*/
 
@@ -479,7 +473,7 @@ input{
         grid-template-rows: 1fr;
     }
 
-    .mission-tb-pics-figcaption{
+    .mission-tb-pics figcaption{
         grid-area: 2 / 1 / 3 / -1;
     }
 
