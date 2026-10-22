@@ -80,7 +80,6 @@ body{
     background-color: var(--background-color);
     min-height: 100dvh;
     line-height: var(--par-line-height);
-    width: 98dvw;
     margin: auto;
 }
 
@@ -93,7 +92,7 @@ main{
 }
 
 main, header, footer{
-    width: 96dvw;
+    width: 96%;
     margin: auto;
 }
 
@@ -309,7 +308,7 @@ blockquote p, blockquote, figcaption, .mission, form button{
 form{
     display: grid;
     gap: var(--tertiary-gap);
-    width: 80dvw;
+    width: 80%;
 }
 
 form button{
@@ -367,7 +366,7 @@ input{
 @media (min-width: 380px){
 
     main, header, footer{
-        width: 90dvw;
+        width: 90%;
     }
 }
 
@@ -457,7 +456,7 @@ input{
     /*"INSCHRIJVEN" PAGE START*/
     /*I decrease the size to keep the form reasonably wide but not insanely wide as screens become bigger*/
     form{
-        width: 50dvw;
+        width: 50%;
     }
 
 }
@@ -534,7 +533,7 @@ input{
 
 
     form{
-        width: 40dvw;
+        width: 40%;
     }
 
 
@@ -570,7 +569,7 @@ input{
     }
 
     form{
-        width: 35dvw;
+        width: 35%;
     }
 
 }
