@@ -73,6 +73,10 @@ img, picture{
     max-width: 100%;
 }
 
+form input{
+    max-width: 100%;
+}
+
 img{
     object-fit: cover;
 }
@@ -179,7 +183,7 @@ label, button{
     --clamp-max: var(--font-size-large);
 }
 
-p{
+p, legend{
     max-width: 70ch;
 }
 
@@ -295,7 +299,7 @@ blockquote p{
     text-align: center;
 }
 
-blockquote p, blockquote, figcaption, .mission, .recipe-article, form button, .subscription, form, input, label, button{
+blockquote p, blockquote, figcaption, .mission, .recipe-article, form button, .subscription, form, button{
     margin: auto;
 }
 
@@ -311,20 +315,46 @@ form{
     width: 80dvw;
 }
 
-form div, input, label, button{
+button{
     width: 100%;
 }
 
 form button{
+    width: 80%;
     padding: 0.5rem;
 }
 
 .checkbox-section{
-    gap: var(--fourth-gap);
+    gap: var(--tertiary-gap);
+    grid-template-columns: max-content auto;
+    margin-top: 1rem;
 }
 
-.checkbox-section input{
-    grid-column: 2 / 3;
+.checkbox-section input, .checkbox-section label{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+fieldset{
+    min-width: 0;
+    border: none;
+    box-sizing: border-box;
+    width: 100%;
+    gap: var(--secondary-gap);
+}
+
+fieldset input{
+    width: 100%;
+}
+
+.email{
+    margin-top: 0.5rem;
+}
+
+legend{
+    font-size: var(--font-size-large);
+    margin-bottom: 1rem;
+    font-weight: 700;
 }
 
 input[type="checkbox"]{
@@ -441,7 +471,7 @@ input{
     /*"INSCHRIJVEN" PAGE START*/
     /*I decrease the size to keep the form reasonably wide but not insanely wide as screens become bigger*/
     form{
-        width: 70dvw;
+        width: 50dvw;
     }
 
 }
@@ -526,7 +556,7 @@ input{
 
 
     form{
-        width: 60dvw;
+        width: 40dvw;
     }
 
 
@@ -565,7 +595,7 @@ input{
 
 
     form{
-        width: 55dvw;
+        width: 35dvw;
     }
 
 }
