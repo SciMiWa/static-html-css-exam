@@ -335,19 +335,14 @@ fieldset{
     min-width: 0;
     border: none;
     width: 100%;
-    gap: var(--secondary-gap);
 }
 
-fieldset input{
+form input{
     width: 100%;
 }
 
-.email{
-    margin-top: 0.5rem;
-}
-
 legend{
-    font-size: var(--font-size-large);
+    font-size: var(--font-size-medium);
     margin-bottom: 1rem;
     font-weight: 700;
 }
