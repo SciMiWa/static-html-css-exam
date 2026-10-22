@@ -42,18 +42,15 @@
     --font-size-medium: 1.2rem;
     --font-size-regular: 1rem;
     --font-size-small: 0.8rem;
-    --font-size-a: 1rem;
     --font-max-h1: 2.5rem;
     --font-max-h2: 1.875rem;
     --font-max-h3: 1.5rem;
     --font-max-h4: 1.245rem;
     --font-max-p: 1.245rem;
-    --font-max-a: 1.245rem;
     --font-scaling-value: 1dvw;
     --special-small-margin: 0.1rem;
     --clamp-min: 0rem;
     --clamp-max: 0rem;
-    --clamp-ideal: 0rem;
 }
 
 *{
@@ -67,10 +64,8 @@ nav ul{
 }
 
 img, picture{
-    max-height: 100%;
     height: 100%;
     width: 100%;
-    max-width: 100%;
 }
 
 img{
@@ -87,7 +82,7 @@ body{
     line-height: var(--par-line-height);
 }
 
-section, article, aside, figure, main, div{
+section, article, figure, main, div{
     display: grid;
 }
 
@@ -100,7 +95,7 @@ main, header, footer{
     margin: auto;
 }
 
-section, article, aside{
+section, article{
     gap: var(--tertiary-gap);
 }
 
@@ -271,13 +266,6 @@ footer p, footer a:link, footer a:visited{
     font-size: var(--font-size-small);
 }
 
-
-/*WEBPAGES*/
-
-/*HOMEPAGE*/
-
-
-
 /*BLOCKQUOTE*/
 
 blockquote{
@@ -295,12 +283,9 @@ blockquote p{
     text-align: center;
 }
 
-blockquote p, blockquote, figcaption, .mission, .recipe-article, form button, .subscription, form, button{
+blockquote p, blockquote, figcaption, .mission, .recipe-article, form button, .subscription, form{
     margin: auto;
 }
-
-/*RECIPES PAGE*/
-
 
 /*"INSCHRIJVEN" PAGE*/
 
@@ -311,12 +296,8 @@ form{
     width: 80dvw;
 }
 
-button{
-    width: 100%;
-}
-
 form button{
-    width: 80%;
+    max-width: 80%;
     padding: 0.5rem;
 }
 
@@ -395,7 +376,7 @@ input{
         display: grid;
     }
 
-    img.visible-from-tablet, picture.visible-from-tablet{
+    picture.visible-from-tablet{
         display: block;
     }
 
@@ -475,7 +456,7 @@ input{
         display: grid;
     }
 
-    picture.visible-from-desktop, img.visible-from-desktop{
+    picture.visible-from-desktop{
         display: block;
     }
 
