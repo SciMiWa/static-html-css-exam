@@ -73,10 +73,6 @@ img, picture{
     max-width: 100%;
 }
 
-form input{
-    max-width: 100%;
-}
-
 img{
     object-fit: cover;
 }
@@ -338,7 +334,6 @@ form button{
 fieldset{
     min-width: 0;
     border: none;
-    box-sizing: border-box;
     width: 100%;
     gap: var(--secondary-gap);
 }
