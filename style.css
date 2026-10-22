@@ -313,7 +313,6 @@ form{
 }
 
 form button{
-    max-width: 80%;
     padding: 0.5rem;
 }
 
@@ -567,7 +566,7 @@ input{
     }
 
     .recipe-article figure{
-        grid-template-rows: repeat(2, 1fr), auto;
+        grid-template-rows: repeat(2, 1fr) auto;
     }
 
     form{
