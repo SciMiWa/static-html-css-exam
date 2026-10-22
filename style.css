@@ -566,7 +566,7 @@ input{
     }
 
     .recipe-article figure{
-        grid-template-rows: repeat(2, 1fr) auto;
+        grid-template-rows: 1fr 1fr auto;
     }
 
     form{
