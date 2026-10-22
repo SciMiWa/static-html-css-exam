@@ -80,6 +80,8 @@ body{
     background-color: var(--background-color);
     min-height: 100dvh;
     line-height: var(--par-line-height);
+    width: 98dvw;
+    margin: auto;
 }
 
 section, article, figure, main, div{
@@ -247,9 +249,9 @@ button:hover{
 
 a:link, a:visited{
     color: var(--text-color);
-    text-underline-offset: 0.3rem;
+    text-underline-offset: 0.2rem;
     text-decoration-color: var(--primary-accent);
-    text-decoration-thickness: 0.1rem;
+    text-decoration-thickness: 0.05rem;
     font-style: italic;
     margin-inline: var(--special-small-margin);
     /*Custom properties caused invisibility issues in the header on webkit (safari)*/
@@ -297,7 +299,7 @@ blockquote p{
     text-align: center;
 }
 
-blockquote p, blockquote, figcaption, .mission, .recipe-article, form button, .subscription, form{
+blockquote p, blockquote, figcaption, .mission, form button, .subscription, form{
     margin: auto;
 }
 
@@ -523,10 +525,6 @@ input{
         grid-area: 3 / 1 / 4 / -1;
     }
 
-    .recipe-article{
-        width: 90%;
-    }
-
     /*"RECEPTEN" END*/
 
     /*"INSCHRIJVEN" START*/
@@ -564,16 +562,13 @@ input{
 
     /*HOMEPAGE END*/
 
-    .recipe-article picture, .recipe-article img{
-        max-width: 35dvw;
+    .recipe-article img{
         max-height: 40dvh;
-        margin: auto;
     }
 
     .recipe-article figure{
-        grid-template-rows: 0.8fr 0.2fr;
+        grid-template-rows: repeat(2, 1fr), auto;
     }
-
 
     form{
         width: 35dvw;
