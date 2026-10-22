@@ -95,6 +95,20 @@ main, header, footer{
     margin: auto;
 }
 
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    border-top: 0.15rem solid var(--primary-accent);
+    align-items: center;
+    padding-top: var(--fourth-gap);
+    padding-bottom: var(--fourth-gap);
+}
+
+/*Removes extra line height, such that the anchor aligns with the rest of the footer elements.*/
+address{
+    display: flex;
+}
+
 section, article{
     gap: var(--tertiary-gap);
 }
@@ -219,6 +233,7 @@ h5{
 
 button{
     background-color: var(--background-color);
+    margin-bottom: 1rem;
 }
 
 button:hover{
@@ -239,8 +254,6 @@ a:hover{
     text-decoration: underline solid var(--primary-accent) 0.05rem;
 }
 
-/*HEADER and FOOTER*/
-
 header nav ul{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -254,12 +267,6 @@ header nav ul{
 header{
     display: flex;
     flex-direction: column;
-}
-
-footer{
-    display: flex;
-    justify-content: space-evenly;
-    border-top: 0.15rem solid var(--primary-accent);
 }
 
 footer p, footer a:link, footer a:visited{
