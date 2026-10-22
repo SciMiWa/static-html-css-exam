@@ -299,7 +299,7 @@ blockquote p{
     text-align: center;
 }
 
-blockquote p, blockquote, figcaption, .mission, form button, .subscription, form{
+blockquote p, blockquote, figcaption, .mission, form button{
     margin: auto;
 }
 
