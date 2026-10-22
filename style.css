@@ -129,6 +129,11 @@ li{
     max-width: 70ch;
 }
 
+.recipes-ul{
+    display: flex;
+    flex-flow: wrap;
+    gap: var(--tertiary-gap);
+}
 
 
 /*Text related styling*/
